@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  19 MAR 2025 10:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  25 MAR 2025 12:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -135,132 +135,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 13.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 13.
-
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
-l.20         \hline
-                   
-? 
-! Misplaced \noalign.
-\rowcolor ->\noalign 
-                     {\ifnum 0=`}\fi \global \let \CT@do@color \CT@@do@color...
-l.21         \rowcolor
-                      {gray !30}
-? 
-! Misplaced alignment tab character &.
-l.22         \hspace{5mm} Versione \hspace{5mm} &
-                                                 
-? 
-! Misplaced alignment tab character &.
-l.23         \hspace{5mm} Data \hspace{5mm} &
-                                             
-? 
-! Misplaced alignment tab character &.
-l.24         \hspace{5mm} Autore \hspace{5mm} &
-                                               
-? 
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
-l.26         \hline
-                   
-? 
-! Misplaced alignment tab character &.
-l.27         1.0 &
-                   14/03/'25 & Matteo & Main.tex \\
-? 
-! Misplaced alignment tab character &.
-l.27         1.0 & 14/03/'25 &
-                               Matteo & Main.tex \\
-? 
-! Misplaced alignment tab character &.
-l.27         1.0 & 14/03/'25 & Matteo &
-                                        Main.tex \\
-? 
-! Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
-l.28         \hline
-                   
-? 
-! Misplaced \crcr.
-\tbl_crcr:n ...l_count_missing_cells:n {#1}}\crcr 
-                                                  
-l.29     \end{tabular}
-                      
-? 
-! Extra }, or forgotten \endgroup.
-\endarray ->\tbl_crcr:n {endarray}\egroup 
-                                          \UseTaggingSocket {tbl/finalize}\t...
-l.29     \end{tabular}
-                      
-? 
-! Extra }, or forgotten \endgroup.
-\endarray ...tbl_restore_outer_cell_data: \egroup 
-                                                  \@arrayright \gdef \@pream...
-l.29     \end{tabular}
-                      
-? 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 29.
+(Font)              <12> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 29.
+(Font)              <8> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 29.
-! Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.29     \end{tabular}
-                      
-? 
-
-! LaTeX Error: \begin{center} on input line 16 ended by \end{tabular}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29     \end{tabular}
-                      
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.29     \end{tabular}
-                      
-? 
-
-! LaTeX Error: \begin{document} ended by \end{center}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 \end{center}
-                 
-? 
-! Extra \endgroup.
-\end  ...end#1\endcsname \@checkend {#1}\endgroup 
-                                                  \UseHook {env/#1/after}\if...
-l.30 \end{center}
-                 
-? 
+(Font)              <6> on input line 21.
 
 
 [1
 
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux)
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+[2
+
+] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1967 strings out of 473190
- 30386 string characters out of 5719979
- 429082 words of memory out of 5000000
- 25240 multiletter control sequences out of 15000+600000
+ 1970 strings out of 473190
+ 30464 string characters out of 5719979
+ 431082 words of memory out of 5000000
+ 25243 multiletter control sequences out of 15000+600000
  564038 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,8n,70p,207b,254s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -269,10 +168,10 @@ live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (1 page, 60452 bytes).
+Output written on main.pdf (2 pages, 63905 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
