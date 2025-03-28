@@ -89,18 +89,55 @@
         <div class="box-piantina" onclick="handleClick()"></div>
     </section>
 
-    <section class="informazioni" >
-        <div class="info-box" onclick="handleClick()">
-            <div class="contenitore">
-                <div class="colonna immagine">
-                    <img src="immagine.jpg" alt="Immagine">
-                </div>
-                <div class="colonna testo"><p>21°</p><br><p>Temperatura interna</p></div>
-                <div class="colonna testo">Testo 2</div>
+    <section class="informazioni">
+    <div class="info-box" onclick="handleClick()">      <!--Termometro-->
+        <div class="contenitore">
+            <div class="colonna immagine">
+                <img src="img\termometro.jpg" alt="termometro" style="margin-top: 17px;">
+            </div>
+            <div class="colonna testo">
+                <p class="valori-parametri"><b>21°</b></p>
+                <br>
+                <p style="font-size: 14px;"><b>T° Interna</b></p>
+            </div>
+            <div class="colonna testo">
+                <p class="valori-parametri"><b>29°</b></p>
+                <br>
+                <p style="font-size: 14px;"><b>T° Esterna</b></p>
             </div>
         </div>
-        <div class="info-box" onclick="handleClick()"></div>
-        <div class="info-box" onclick="handleClick()"></div>
+    </div>
+    <div class="info-box" onclick="handleClick()">      <!--Fotovoltaico-->
+        <div class="contenitore">
+            <div class="colonna immagine">
+                <img src="img\pannello.jpg" style="margin-top:17px;" alt="fotovoltaico">
+            </div>
+            <div class="colonna testo">
+                <p class="valori-parametri"><b>4 kWh</b></p>
+                <br>
+                <p style="font-size: 14px;"><b>Produzione oraria</b></p>
+            </div>
+            <div class="colonna testo">
+                <p class="valori-parametri"><b>96%</b></p>
+                <br>
+                <p style="font-size: 14px;"><b>Batteria</b></p>
+            </div>
+        </div>
+    </div>
+    <div class="info-box" onclick="handleClick()">      <!--Consumo casa-->
+        <div class="contenitore">
+            <div class="colonna immagine">
+                <img src="img\fulmine.jpg" alt="Consumo" style="width:50px; height: 90px; margin-top:19px ;" >
+            </div>
+            <div class="colonna testo">
+                <p class="valori-parametri"><b>3,5kWh</b></p>
+                <br>
+                <p style="font-size: 14px;"><b>Consumo Energetico Orario</b></p>
+            </div>
+            
+        </div>
+    </div>
+</section>
 
     </section>
 
