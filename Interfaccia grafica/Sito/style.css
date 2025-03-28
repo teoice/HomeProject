@@ -110,11 +110,6 @@ body {
     box-sizing: border-box;
 }
 
-.info-box:hover {
-    transform: scale(1.05);
-    background-color: rgba(30, 159, 50, 0.8);
-}
-
 .container{
     display: flex;
     justify-content: center;
