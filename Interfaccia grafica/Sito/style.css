@@ -6,9 +6,9 @@
 }
 
 body {
-    background-image: url("img/campo_di_grano.jpg");
+    background-image: url("img/campo_di_grano_viola.webp");
     background-size: cover;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(3px);
     text-align: center;
 }
 
@@ -40,7 +40,7 @@ body {
     font-weight: bold;
 }
 
-.buttons-container {
+.singole-funzionalità {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -67,17 +67,17 @@ body {
 
 .button:hover {
     transform: scale(1.05);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.images-container {
+.piantine {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin: 30px 0;
 }
 
-.image-box {
+.box-piantina {
     width: 150px;
     height: 150px;
     background-color: red;
@@ -86,7 +86,121 @@ body {
     transition: transform 0.3s, background-color 0.3s;
 }
 
-.image-box:hover {
+.box-piantina:hover {
     transform: scale(1.05);
     background-color: rgba(255, 0, 0, 0.8);
 }
+
+.informazioni {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.info-box {
+    width: 300px;
+    height: 150px;
+    background-color: rgb(30, 159, 50);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.info-box:hover {
+    transform: scale(1.05);
+    background-color: rgba(30, 159, 50, 0.8);
+}
+
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .card{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 15px 60px rgba(0,0,0, .5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card .face{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card .face.face1{
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  .card .face.face1 h2{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .card .face.face1 .content{
+    font-size:1.2em;
+    margin:0;
+    padding:0 0 1em 0;
+    font-weight:500;
+  }
+
+  .card .face.face2{
+    background: #111;
+    transition: 0.5s;
+    border-radius: 15px;
+  }
+  
+  .card:hover .face.face2{
+    height: 60px;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .card .face.face2:before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255, 0.1);
+    border-radius: 15px 0 0 15px;
+  }
+  
+  .card .face.face2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card .face.face2 img{
+    margin: 0;
+    padding: 0;
+    max-width: 250px;
+    max-height: 150px;
+    transition: all 0.5s ease;
+  }
+  
+  .card:hover .face.face2 img{
+    max-width: 160px;
+    max-height: 110px;
+    transform: scale(0.5); ;
+  }
+  
