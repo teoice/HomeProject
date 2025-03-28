@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  25 MAR 2025 11:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  27 MAR 2025 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -221,7 +221,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 21--23
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
@@ -230,7 +230,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--23
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 25--27
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
@@ -239,7 +239,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 29--33
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
@@ -252,7 +257,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--33
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
@@ -261,6 +271,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--42
 [6
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
 
 [7
 
@@ -273,13 +288,13 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3111 strings out of 473190
- 46982 string characters out of 5719979
+ 3113 strings out of 473190
+ 47036 string characters out of 5719979
  460145 words of memory out of 5000000
- 26376 multiletter control sequences out of 15000+600000
+ 26378 multiletter control sequences out of 15000+600000
  563172 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,70p,522b,254s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,10n,70p,478b,254s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist
@@ -287,7 +302,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist
 e1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmti12.pfb>
-Output written on Questionario.pdf (7 pages, 99817 bytes).
+Output written on Questionario.pdf (7 pages, 99232 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream

@@ -1,13 +1,20 @@
 \documentclass[italian, 12pt, a4paper]{article}
 \usepackage{graphicx} % Required for inserting images
 \usepackage[table]{xcolor}
+\usepackage[hidelinks]{hyperref} % Evita bordi colorati nei link
 
-\title{HomeProject}
-\author{Matteo Saramin, Filippo Sperandio \textit{ASRL Corporation} \\ {\small ITTS Vito Volterra} \\ \\ \emph{Cliente: Roberto Rossi}}
+\setlength{\parindent}{10mm} % Imposta il rientro della prima riga di ogni paragrafo
+\usepackage{xcolor}
+\usepackage{titlesec}
 
-\newcommand{\version}{Version 1.0} % Definisce il comando per la versione
+\titleformat{\section}{\color{violet!60}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\color{violet!45}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\title{\huge{HomeProject}}
+\author{Matteo Saramin, Filippo Sperandio \textit{DomusFelix} \\ {\small ITTS Vito Volterra} \\ \\ \emph{Cliente: Roberto Rossi}}
+
+\newcommand{\version}{Version 2.0} % Definisce il comando per la versione
 \date{\version\\ 15 Marzo 2025}
-
 \begin{document}
 
 \maketitle % Mostra titolo, autore e data
@@ -32,14 +39,52 @@ La seguente tabella riporta lo storico delle versioni del documento, includendo 
 \vspace{15mm}
 \section{Sommario}
 \begin{enumerate}
-    \item Introduzione
-    \item Specifiche Requisiti Funzionali
-    \item Terzo elemento
+    \item \hyperref[sec:introduzione]{Introduzione}
+    \item \hyperref[sec:situazione]{Situazione attuale}
+    \item \hyperref[sec:requisiti]{Requisiti Hardware \& Software}
+    \item \hyperref[sec:requisiti2]{Specifiche Requisiti Funzionali}
 \end{enumerate}
 \clearpage
-\section{Introduzione}
-Questo è il testo della sezione introduttiva.
-\vspace{20mm}
-\section{Specifica Requisiti Funzionali}
+\section{Introduzione}\label{sec:introduzione}
+L’obiettivo di questo documento è raccogliere informazioni fondamentali per la progettazione di un sistema domotico personalizzato, in grado di soddisfare le esigenze specifiche del cliente.\\[1.5mm]Il nostro progetto prevede lo sviluppo di un’interfaccia grafica interattiva che consentirà agli utenti di controllare in modo semplice ed efficace le funzionalità della propria abitazione. L’idea centrale è offrire un sistema intuitivo, accessibile da più dispositivi e in grado di migliorare il comfort, la sicurezza e l’efficienza energetica della casa.\\[1.5mm]
+Per garantire che il sistema realizzato sia il più possibile aderente alle necessità del cliente, abbiamo strutturato un questionario mirato, suddiviso in diverse sezioni. Questo questionario è stato elaborato per raccogliere dettagli sulla configurazione dell’abitazione, i dispositivi domotici desiderati, le funzionalità ritenute più importanti e le preferenze riguardanti l’interfaccia utente.
+Le informazioni fornite dal cliente ci permetteranno di sviluppare un sistema domotico su misura, ottimizzando la disposizione dei dispositivi, i parametri di controllo e l’interazione con il sistema. Inoltre, l’analisi delle risposte ci aiuterà a progettare un’interfaccia grafica chiara e funzionale, organizzata in base alle diverse zone della casa e alle principali operazioni disponibili.\\[1.5mm]
+La comunicazione con il cliente è un elemento essenziale per il successo del progetto, e questo documento rappresenta un primo passo cruciale per garantire che il prodotto finale risponda alle aspettative e necessità dell’utente.
+\clearpage
+\section{Situazione attuale}\label{sec:situazione}
+\subsection{Versione 1.0}
+\begin{quote}
+In questa prima versione abbiamo definito la struttura generale della documentazione, compresa di questo documento e del questionario fornitore-cliente.  Nei primissimi giorni abbiamo definito generalmente l'impostazione dell'interfaccia grafica, senza addrentrarci però nei dettagli, per avere una maggiore flessibilità nelle succesive giornate.
+\end{quote}
+\subsection{Versione 2.0}
+\begin{quote}
+    In questa seconda fase ci siamo focalizzati nel progettare più dettagliamente l'interfaccia grafica, in un primo momento con una rappresentazione grafica realizzata congiuntamente, e succesivamente definendola con un sito web in locale, tramite linguaggio \emph{HTML, CSS e Javascript}. Inoltre la stesura della documentazione è proseguita, in particolare con il questionario, dopo anche una revisione in cooperazione con la prof. \emph{Tollot}. Abbiamo scelto GitHub per condividere il progetto, in modo da facilitare la collaborazione, tracciare le modifiche e mantenere una copia centralizzata del nostro lavoro.
+\end{quote}
+\clearpage
+\section{Requisiti Hardware \& Software}\label{sec:requisiti}
+Per un coretto ed efficiente funzionamento dell'intero sistema domotico della casa del nostro cliente, in relazione alle sue richieste e necessità, abbiamo individuato i seguenti requisiti hardware e software.
+\begin{enumerate}
+    \item L'interfacci grafica deve essere utilizzata dal cliente, e richiede che sia chiara, semplice e intuitiva, in modo da modificare i parametri della casa a suo piacimento. Questi parametri sono: la temperatura, l'illuminazione, l'automazione delle finestre, l'irrigazione del giardino e il sistema d'allarme.
+    \item L’interfaccia deve adattarsi a diversi dispositivi, funzionando efficacemente su desktop e mobile.
+    \item Le modifiche apportate dall’utente devono essere applicate in tempo reale e riflesse nel sistema senza ritardi eccessivi.
+    \item Deve essere presente un pannello di controllo in ogni stanza della casa, con ovviamente la possibilità di modificare i relativi parametri di quella stanza, come illuminazione e temperatura.
+    \item Il sistema deve permettere di accendere e spegnere le luci in ogni stanza, sia tramite l'interfaccia grafica che fisicamente tramite un pulsante; inoltre sono implementanti delle automazioni, in relazionea a sensori e orari.
+    \item Il sistema deve permettere di gestire la temperatura della casa, tramite gli adeguati dispositivi di riscaldamento e raffreddamento.
+    \item Il sistema deve supportare l'impianto fotovoltaico, munito di 4 pannelli solari e una batteria, per una maggiore efficienza e garantendo l’utilizzo di energia completamente rinnovabile.
+    \item Deve essere possibile verificare la produzione energetica dei pannelli fotovoltaici. Di conseguenza è necessario visualizzare anche la percentuale della batteria. Gli altri parametri necessari sono il consumo energetico dell’intera casa e \ldots
+\end{enumerate}
+\clearpage
+\section{Specifica Requisiti Funzionali}\label{sec:requisiti2}
+\subsection{HMI - Human Machine Interface}
+Il cliente richiede un’interfaccia grafica (HMI) accessibile da più dispositivi, tra cui computer, telefoni, un tablet e pannelli di controllo installati in ogni stanza. Questi dispositivi devono garantire un'esperienza un uso ottimale, un'interfaccia responsive che si adatti automaticamente alle diverse dimensioni dello schermo e che mantenga una navigazione fluida e intuitiva.  I pannelli di controllo posizionati strategicamente in ogni stanza della casa, devono consentire la gestione dei parametri della relativa stanza, di cui: illuminazione, temperatura, stato delle finestre, irrigazione e il sistema d’allarme. Gli altri dispositivi, di cui telefoni, computer e un tablet devono invece rappresentare lo stato generale della casa, con comunque la possibilità di interagire con il sitema domotica di ogni singola stanza.\\[1.5mm]
+Un aspetto fondamentale dell’HMI è il monitoraggio dell’impianto fotovoltaico, che deve fornire in tempo reale dati sulla produzione energetica, la percentuale di carica della batteria e il consumo energetico dell’abitazione. Il cliente desidera una rappresentazione chiara e dettagliata di queste informazioni, con grafici intuitivi e indicatori che permettano di valutare rapidamente l’efficienza del sistema.\\[1.5mm]
+La struttura dell’interfaccia grafica richiesta dall’utente è la seguente: un prima rappresentazione visiva dei parametri fondamentali della casa domotica, visti in precedenza, successivamente una rappresentazione dell’intera casa, munita degli apparati intelligenti, in modo da modificare lo stato di essi. Infine un’ultima sezione con alcune specifiche del complesso della casa; di cui queste sono richieste esplicitamente dall’utente: Consumo energetico dell’intera casa, produzione in kW dell’impianto fotovoltaico e lo stato di carica della batteria, e \ldots\\[1.5mm]
+La modalità con cui l’utente approccia con il sistema è appunto attraverso l’interfaccia grafica, deve quindi quest’ultima essere semplice, intuitiva, senza eccessivi ritardi e un’organizzazione delle funzioni che renda il controllo della casa semplice e immediato, anche per utenti senza particolari competenze tecniche.
 
+come l'utente vuole l'interfacci agrafica, password, dispositivi\ldots
+\subsection{Specifiche Funzionalità}
+Le funzionalità specifiche dell'utente, scenari
+\subsection{Progettazione di Rete}
+\ldots
+\clearpage
 \end{document}

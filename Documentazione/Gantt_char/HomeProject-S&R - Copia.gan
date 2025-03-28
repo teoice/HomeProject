@@ -9,6 +9,7 @@
         <option id="filter.dueTodayTasks" value="false"/>
         <option id="filter.overdueTasks" value="false"/>
         <option id="filter.inProgressTodayTasks" value="false"/>
+        <timeline><![CDATA[4]]></timeline>
         <option id="color.recent"><![CDATA[#ffccff #ffcccc #9999ff #ff66ff #ff00ff #f3b76b #69dfa5 #ff7373]]></option>
     </view>
     <view id="resource-table">
@@ -39,15 +40,15 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" uid="7d73c8b02f384cdca69fb1038fb97012" name="Interfaccia Grafica" color="#ff7373" meeting="false" start="2025-03-12" duration="14" complete="0" expand="false">
-            <task id="4" uid="3a37d1ce6655415193de9a5437f3a780" name="Discussione Archittetura del sito" color="#ffcccc" meeting="false" start="2025-03-12" duration="4" complete="0" expand="true"/>
-            <task id="5" uid="920b5edd9acb44dda80cabc37d8e2730" name="Realizzazione Sito Web" color="#ffcccc" meeting="false" start="2025-03-17" duration="11" complete="0" expand="true"/>
-        </task>
-        <task id="3" uid="2c96ba93c67349c1b3e95b22ee80189f" name="Documentazione" color="#ff66ff" meeting="false" start="2025-03-12" duration="14" complete="0" expand="false">
-            <task id="6" uid="0fd0fb4335684c9780eba5f62371db71" name="Stesura Questionario" color="#ffccff" meeting="false" start="2025-03-12" duration="6" complete="0" expand="true">
-                <depend id="7" type="2" difference="-1" hardness="Strong"/>
+        <task id="0" uid="7d73c8b02f384cdca69fb1038fb97012" name="Interfaccia Grafica" color="#ff7373" meeting="false" start="2025-03-12" duration="14" complete="50" expand="false">
+            <task id="4" uid="3a37d1ce6655415193de9a5437f3a780" name="Discussione Archittetura del sito" color="#ffcccc" meeting="false" start="2025-03-12" duration="4" complete="100" expand="true">
+                <depend id="5" type="2" difference="0" hardness="Strong"/>
             </task>
-            <task id="7" uid="14f2d1d50ce64bf9bbdf393f49c1d0ac" name="Realizzazione Documentazione con Latex" color="#ffccff" meeting="false" start="2025-03-19" duration="9" complete="0" expand="true"/>
+            <task id="5" uid="920b5edd9acb44dda80cabc37d8e2730" name="Realizzazione Sito Web" color="#ffcccc" meeting="false" start="2025-03-18" duration="10" complete="30" expand="true"/>
+        </task>
+        <task id="3" uid="2c96ba93c67349c1b3e95b22ee80189f" name="Documentazione" color="#ff66ff" meeting="false" start="2025-03-12" duration="14" complete="46" expand="false">
+            <task id="6" uid="0fd0fb4335684c9780eba5f62371db71" name="Stesura Questionario" color="#ffccff" meeting="false" start="2025-03-12" duration="6" complete="70" expand="true"/>
+            <task id="7" uid="14f2d1d50ce64bf9bbdf393f49c1d0ac" name="Realizzazione Documentazione con Latex" color="#ffccff" meeting="false" start="2025-03-19" duration="9" complete="30" expand="true"/>
         </task>
         <task id="1" uid="741bb779edb2402da62084691c17598a" name="Progettazione Rete" color="#9999ff" meeting="false" start="2025-04-01" duration="11" complete="0" expand="true"/>
         <task id="2" uid="87a5790d11fb41b5bba5ffb1f56178c9" name="Sistema Domotica/ Consegna Finale" color="#69dfa5" meeting="false" start="2025-04-16" duration="21" complete="0" expand="true"/>
