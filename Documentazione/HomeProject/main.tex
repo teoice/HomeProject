@@ -9,7 +9,7 @@
 
 \titleformat{\section}{\color{violet!60}\normalfont\Large\bfseries}{\thesection}{1em}{}
 \titleformat{\subsection}{\color{violet!45}\normalfont\large\bfseries}{\thesubsection}{1em}{}
-
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{violet!30}}{\thesubsubsection}{1em}{}
 \title{\huge{HomeProject}}
 \author{Matteo Saramin, Filippo Sperandio \textit{DomusFelix} \\ {\small ITTS Vito Volterra} \\ \\ \emph{Cliente: Roberto Rossi}}
 
@@ -33,7 +33,6 @@ La seguente tabella riporta lo storico delle versioni del documento, includendo 
         1.0 & 14/03/2025 & Matteo & main.tex \\
         \hline
         2.0&25/03/2025&Matteo e Filippo & main.tex \\
-        \hline
         \hline
         2.5&28/03/2025&Matteo e Filippo&main.tex\\
         \hline
@@ -86,7 +85,7 @@ Per un coretto ed efficiente funzionamento dell'intero sistema domotico della ca
 Per garantire un sistema domotico efficiente e funzionale, è stata effettuata una selezione attenta dei dispositivi hardware. La scelta è stata guidata dall’obiettivo di ottimizzare l’integrazione tra i vari componenti, garantendo affidabilità, efficienza energetica e semplicità d’uso per l’utente finale.
 Nelle sezioni seguenti verranno illustrati i dispositivi adottati, per implementare le funzionalità dell'illuminazione, gestione della temperatura, automazione delle finestre, irrigazione, impianto fotovoltaico e sistema d'allarme.
 \subsection{Illuminazione}
-\subsection{1° Lampada Pendente}
+\subsubsection{1° Lampada Pendente}
 Abbiamo scelto come corpo illuminante principale un lampadario pendente a LED, di forma sferica e paralume in tessuto ignifugo, adatta ad un'illuminazione ottimale di vasti ambienti o camere.
 \begin{quote}
     \begin{enumerate}
@@ -96,7 +95,7 @@ Abbiamo scelto come corpo illuminante principale un lampadario pendente a LED, d
         \item Temperatura Colore: \emph{4000K}.
         \item D = \emph{50cm}; H = \emph{50cm};
     \end{enumerate}
-    \vspace{-40pt}
+    \vspace{-20pt}
 \end{quote}
 \begin{figure}[h!]
     \centering
@@ -112,15 +111,15 @@ Abbiamo scelto come corpo illuminante principale un lampadario pendente a LED, d
     \end{minipage}
 \end{figure}
 \hrule
-\subsection{1° Lampada Pendente}
+\subsubsection{2° Lampada da Muro}
 Abbiamo scelto come secondo corpo illuminante un lampadario pendente a LED, di forma sferica e paralume in tessuto ignifugo, adatta ad un'illuminazione ottimale di vasti ambienti o camere.
 \begin{quote}
     \begin{enumerate}
         \item Sorgente Luminosa: \emph{LED}.
-        \item Potenza: \emph{50W}.
+        \item Potenza: \emph{28W}.
         \item Flusso luminoso: \emph{4000 lumen}.
-        \item Temperatura Colore: \emph{4000K}.
-        \item D = \emph{50cm}; H = \emph{50cm};
+        \item Temperatura Colore: \emph{3000K}.
+        \item L = \emph{60cm}; H = \emph{50cm};
     \end{enumerate}
     \vspace{-40pt}
 \end{quote}
@@ -138,7 +137,105 @@ Abbiamo scelto come secondo corpo illuminante un lampadario pendente a LED, di f
     \end{minipage}
 \end{figure}
 \hrule
+\subsubsection{3° Lampada da Tavolo}
+Come terzo corpo illuminante abbiamo scelto una lampada da tavolo, combaciando perfettamente un ottimo oggetto di design e una illuminazione soffusa nelle ore notturne perfetta per la lettura o scrittura.
+\begin{quote}
+    \begin{enumerate}
+        \item Sorgente Luminosa: \emph{LED}.
+        \item Potenza: \emph{100W}.
+        \item Flusso luminoso: \emph{1600 lumen}.
+        \item Temperatura Colore: \emph{2700K}.
+        \item D = \emph{42cm}; H = \emph{62cm};
+    \end{enumerate}
+\end{quote}
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/lampada-tavolo.png} % modifica con il percorso della tua prima immagine
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/lampada-tavolo-top.png} % modifica con il percorso della tua seconda immagine
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
+\hrule
 \clearpage
+\subsection{Dispositivi per la Climatizzazione}
+\subsubsection{1° Dispositivo Termoregolatore}
+Ho scelto di installare un condizionatore con funzione sia di raffreddamento che di riscaldamento per garantire un comfort ottimale tutto l'anno, ottimizzando l'efficienza energetica e riducendo i costi rispetto a soluzioni separate.
+\begin{quote}
+    \begin{enumerate}
+        \item Capacità di Raffredamento: \emph{9000 BTU}
+        \item Capacità di Riscaldamento: \emph{7000 BTU}
+        \item Efficienza Energetica: \emph{A++}
+        \item W = \emph{48cm};  = \emph{85cm}; Peso: \emph{10kg}; 
+    \end{enumerate}
+\end{quote}
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{img/condizionatore.png} % modifica con il percorso della tua prima immagine
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.7\linewidth]{img/condizionatore-top.png} % modifica con il percorso della tua seconda immagine
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
+\hrule
+\subsubsection{2° Dispositivo di Riscaldamento}
+Ho scelto di installare un pannello riscaldante in bagno per garantire un riscaldamento più uniforme e discreto, evitando l'umidità e migliorando l'igiene. Inoltre, il pannello offre un'alternativa più pulita e sicura rispetto ai tradizionali radiatori, riducendo al minimo l'accumulo di polvere e migliorando il comfort generale.
+\begin{quote}
+    \begin{enumerate}
+        \item Capacità di Riscaldamento: \emph{7000 BTU}
+        \item Efficienza Energetica: \emph{A++}
+        \item W = \emph{102cm}; L = \emph{64cm}; Peso: \emph{7kg}; 
+    \end{enumerate}
+\end{quote}
+\vspace{-15px}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.4\linewidth]{img/pannelo.png} % modifica con il percorso della tua prima immagine
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.4\linewidth]{img/panello-top.png} % modifica con il percorso della tua seconda immagine
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
+\clearpage
+\subsection{Dispositivo per l'Irrigazione}
+\subsubsection{1° Dispositivo Irrigatorio}
+
+\begin{quote}
+    \begin{enumerate}
+        \item Capacità di Riscaldamento: \emph{7000 BTU}
+        \item Efficienza Energetica: \emph{A++}
+        \item W = \emph{102cm}; L = \emph{64cm}; Peso: \emph{7kg}; 
+    \end{enumerate}
+\end{quote}
+\vspace{-15px}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.4\linewidth]{img/pannelo.png} % modifica con il percorso della tua prima immagine
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.4\linewidth]{img/panello-top.png} % modifica con il percorso della tua seconda immagine
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
 \section{Specifica Requisiti Funzionali}\label{sec:requisiti2}
 \subsection{HMI - Human Machine Interface}
 Il cliente richiede un’interfaccia grafica (HMI) accessibile da più dispositivi, tra cui computer, telefoni, un tablet e pannelli di controllo installati in ogni stanza. Questi dispositivi devono garantire un'esperienza un uso ottimale, un'interfaccia responsive che si adatti automaticamente alle diverse dimensioni dello schermo e che mantenga una navigazione fluida e intuitiva.  I pannelli di controllo posizionati strategicamente in ogni stanza della casa, devono consentire la gestione dei parametri della relativa stanza, di cui: illuminazione, temperatura, stato delle finestre, irrigazione e il sistema d’allarme. Gli altri dispositivi, di cui telefoni, computer e un tablet devono invece rappresentare lo stato generale della casa, con comunque la possibilità di interagire con il sitema domotica di ogni singola stanza.\\[1.5mm]
