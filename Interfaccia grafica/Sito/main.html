@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domus Felix</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"   href="style.css">
 </head>
 <body>
+
+    <!--//////////MENU'//////////-->
 
     <nav class="menu">
         <div class="logo">
@@ -18,7 +21,7 @@
         </div>
     </nav>
 
-   
+   <!--//////////SINGOLE-FUNZIONALITA'//////////-->
 
     <section class="singole-funzionalità">
         <div class="container">
@@ -26,71 +29,103 @@
               <div class="face face1">
                 <div class="content">
                   <h2>Luci</h2> 
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                    
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider"></span>
+                    </label>
                 </div>
               </div>
               <div class="face face2">
-                <img src="img/allarme.png" alt="Allarme" style="width: 250px; height: 150px;">
+                <img class ="immagini" src="img/lampadario.png" alt="Lampadario">
               </div>
             </div>
             <div class="card">
               <div class="face face1">
                 <div class="content">
                   <h2>Persiane</h2> 
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                  <p></p>
                 </div>
               </div>
               <div class="face face2">
-                <img src="img/allarme.png" alt="Allarme" style="width: 250px; height: 150px;">
+                <img class ="immagini" src="img/persiane.png" alt="Persiane">
               </div>
             </div>
             <div class="card">
               <div class="face face1">
                 <div class="content">
                   <h2>Irrigatori</h2> 
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                  <p></p>
                 </div>
               </div>
               <div class="face face2">
-                <img src="img/allarme.png" alt="Allarme" style="width: 250px; height: 150px;">
+                <img class ="immagini" src="img/irrigatore.png" alt="Irrigatore">
               </div>
             </div>
             <div class="card">
                 <div class="face face1">
                   <div class="content">
                     <h2>Termometri</h2> 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                    <p></p>
                   </div>
                 </div>
                 <div class="face face2">
-                  <img src="img/allarme.png" alt="Allarme" style="width: 250px; height: 150px;">
+                  <img class ="immagini" src="img/termometro.png" alt="Termometro">
                 </div>
               </div>
               <div class="card">
                 <div class="face face1">
                   <div class="content">
                     <h2>Allarme</h2> 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                    <p></p>
                   </div>
                 </div>
                 <div class="face face2">
-                  <img src="img/allarme.png" alt="Allarme" style="width: 250px; height: 150px;">
+                  <img class ="immagini" src="img/allarme.png" alt="Allarme" >
                 </div>
               </div>
           </div>
     </section>
 
 
-
+    <!--//////////PIANTINE//////////-->
 
     <section class="piantine">
         <div class="box-piantina" onclick="handleClick()"></div>
         <div class="box-piantina" onclick="handleClick()"></div>
         <div class="box-piantina" onclick="handleClick()"></div>
+
+        <div class="carta">
+          <div class="slide slide1">
+            <div class="content">
+              <div class="icon">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="slide slide2">
+            <div class="content">
+              <h3> ciaone</h3>
+            </div>
+          </div>
+        </div>
+
+
+
     </section>
 
+
+
+
+
+
+
+    <!--//////////INFO-BOX//////////-->
     <section class="informazioni">
-    <div class="info-box" onclick="handleClick()">      <!--Termometro-->
+
+    <!--  Termometro  -->
+
+    <div class="info-box" onclick="handleClick()">      
         <div class="contenitore">
             <div class="colonna immagine">
                 <img src="img\termometro.jpg" alt="termometro" style="margin-top: 17px;">
@@ -107,7 +142,11 @@
             </div>
         </div>
     </div>
-    <div class="info-box" onclick="handleClick()">      <!--Fotovoltaico-->
+
+
+    <!--  Fotovoltaico  -->
+
+    <div class="info-box" onclick="handleClick()">      
         <div class="contenitore">
             <div class="colonna immagine">
                 <img src="img\pannello.jpg" style="margin-top:17px;" alt="fotovoltaico">
@@ -124,7 +163,10 @@
             </div>
         </div>
     </div>
-    <div class="info-box" onclick="handleClick()">      <!--Consumo casa-->
+
+    <!--  Consumo casa  -->
+
+    <div class="info-box" onclick="handleClick()">      
         <div class="contenitore">
             <div class="colonna immagine">
                 <img src="img\fulmine.jpg" alt="Consumo" style="width:50px; height: 90px; margin-top:19px ;" >
