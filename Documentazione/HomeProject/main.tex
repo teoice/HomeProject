@@ -34,6 +34,9 @@ La seguente tabella riporta lo storico delle versioni del documento, includendo 
         \hline
         2.0&25/03/2025&Matteo e Filippo & main.tex \\
         \hline
+        \hline
+        2.5&28/03/2025&Matteo e Filippo&main.tex\\
+        \hline
     \end{tabular}\\[4mm]
 \end{center}
 \vspace{15mm}
@@ -60,6 +63,10 @@ In questa prima versione abbiamo definito la struttura generale della documentaz
 \begin{quote}
     In questa seconda fase ci siamo focalizzati nel progettare più dettagliamente l'interfaccia grafica, in un primo momento con una rappresentazione grafica realizzata congiuntamente, e succesivamente definendola con un sito web in locale, tramite linguaggio \emph{HTML, CSS e Javascript}. Inoltre la stesura della documentazione è proseguita, in particolare con il questionario, dopo anche una revisione in cooperazione con la prof. \emph{Tollot}. Abbiamo scelto GitHub per condividere il progetto, in modo da facilitare la collaborazione, tracciare le modifiche e mantenere una copia centralizzata del nostro lavoro.
 \end{quote}
+\subsection{Versione 2.5}
+\begin{quote}
+    All'avvicinarsi della scadenza per l'interfaccia grafica e documentazione abbiamo concluso la stesura della documentazione, individuando gli ultimi requisiti software e hardware, e le funzionalità richieste dall'utente. Abbiamo progettato la planimetria della casa, tramite il software \emph{RoomSketcher}, scelto per la sua facilità d'uso e i modelli predefiniti, che abbiamo adattato alle nostre esigenze, e implementato nell'interfaccia grafica. Infine abbiamo terminato l'interfaccia grafica, suddividendola in due implementazioni, una per i pannelli presenti in ogni stanza, e una per i dispositivi, quali computer o telefoni.
+\end{quote}
 \clearpage
 \section{Requisiti Hardware \& Software}\label{sec:requisiti}
 Per un coretto ed efficiente funzionamento dell'intero sistema domotico della casa del nostro cliente, in relazione alle sue richieste e necessità, abbiamo individuato i seguenti requisiti hardware e software.
@@ -68,11 +75,69 @@ Per un coretto ed efficiente funzionamento dell'intero sistema domotico della ca
     \item L’interfaccia deve adattarsi a diversi dispositivi, funzionando efficacemente su desktop e mobile.
     \item Le modifiche apportate dall’utente devono essere applicate in tempo reale e riflesse nel sistema senza ritardi eccessivi.
     \item Deve essere presente un pannello di controllo in ogni stanza della casa, con ovviamente la possibilità di modificare i relativi parametri di quella stanza, come illuminazione e temperatura.
+    \item Il sistema deve supportare i dispositivi intelligenti che implementano le funzionalità scelte dal'utente.
     \item Il sistema deve permettere di accendere e spegnere le luci in ogni stanza, sia tramite l'interfaccia grafica che fisicamente tramite un pulsante; inoltre sono implementanti delle automazioni, in relazionea a sensori e orari.
     \item Il sistema deve permettere di gestire la temperatura della casa, tramite gli adeguati dispositivi di riscaldamento e raffreddamento.
     \item Il sistema deve supportare l'impianto fotovoltaico, munito di 4 pannelli solari e una batteria, per una maggiore efficienza e garantendo l’utilizzo di energia completamente rinnovabile.
-    \item Deve essere possibile verificare la produzione energetica dei pannelli fotovoltaici. Di conseguenza è necessario visualizzare anche la percentuale della batteria. Gli altri parametri necessari sono il consumo energetico dell’intera casa e \ldots
+    \item Deve essere possibile verificare la produzione energetica dei pannelli fotovoltaici. Di conseguenza è necessario visualizzare anche la percentuale della batteria. Gli altri parametri necessari sono il consumo energetico dell’intera casa e la temperatura interna e esterna della casa.
 \end{enumerate}
+\clearpage
+\section{Dispositivi Installati}
+Per garantire un sistema domotico efficiente e funzionale, è stata effettuata una selezione attenta dei dispositivi hardware. La scelta è stata guidata dall’obiettivo di ottimizzare l’integrazione tra i vari componenti, garantendo affidabilità, efficienza energetica e semplicità d’uso per l’utente finale.
+Nelle sezioni seguenti verranno illustrati i dispositivi adottati, per implementare le funzionalità dell'illuminazione, gestione della temperatura, automazione delle finestre, irrigazione, impianto fotovoltaico e sistema d'allarme.
+\subsection{Illuminazione}
+\subsection{1° Lampada Pendente}
+Abbiamo scelto come corpo illuminante principale un lampadario pendente a LED, di forma sferica e paralume in tessuto ignifugo, adatta ad un'illuminazione ottimale di vasti ambienti o camere.
+\begin{quote}
+    \begin{enumerate}
+        \item Sorgente Luminosa: \emph{LED}.
+        \item Potenza: \emph{50W}.
+        \item Flusso luminoso: \emph{4000 lumen}.
+        \item Temperatura Colore: \emph{4000K}.
+        \item D = \emph{50cm}; H = \emph{50cm};
+    \end{enumerate}
+    \vspace{-40pt}
+\end{quote}
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/lampada.png} % modifica con il percorso della tua prima immagine
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/lampada-top.png} % modifica con il percorso della tua seconda immagine
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
+\hrule
+\subsection{1° Lampada Pendente}
+Abbiamo scelto come secondo corpo illuminante un lampadario pendente a LED, di forma sferica e paralume in tessuto ignifugo, adatta ad un'illuminazione ottimale di vasti ambienti o camere.
+\begin{quote}
+    \begin{enumerate}
+        \item Sorgente Luminosa: \emph{LED}.
+        \item Potenza: \emph{50W}.
+        \item Flusso luminoso: \emph{4000 lumen}.
+        \item Temperatura Colore: \emph{4000K}.
+        \item D = \emph{50cm}; H = \emph{50cm};
+    \end{enumerate}
+    \vspace{-40pt}
+\end{quote}
+\begin{figure}[h!]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/lampada_.png} % modifica con il percorso della tua prima immagine
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{img/lampada-top.png} % modifica con il percorso della tua seconda immagine
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
+\hrule
 \clearpage
 \section{Specifica Requisiti Funzionali}\label{sec:requisiti2}
 \subsection{HMI - Human Machine Interface}
@@ -81,7 +146,7 @@ Un aspetto fondamentale dell’HMI è il monitoraggio dell’impianto fotovoltai
 La struttura dell’interfaccia grafica richiesta dall’utente è la seguente: un prima rappresentazione visiva dei parametri fondamentali della casa domotica, visti in precedenza, successivamente una rappresentazione dell’intera casa, munita degli apparati intelligenti, in modo da modificare lo stato di essi. Infine un’ultima sezione con alcune specifiche del complesso della casa; di cui queste sono richieste esplicitamente dall’utente: Consumo energetico dell’intera casa, produzione in kW dell’impianto fotovoltaico e lo stato di carica della batteria, e \ldots\\[1.5mm]
 La modalità con cui l’utente approccia con il sistema è appunto attraverso l’interfaccia grafica, deve quindi quest’ultima essere semplice, intuitiva, senza eccessivi ritardi e un’organizzazione delle funzioni che renda il controllo della casa semplice e immediato, anche per utenti senza particolari competenze tecniche.
 
-come l'utente vuole l'interfacci agrafica, password, dispositivi\ldots
+come l'utente vuole l'interfacci grafica, password, dispositivi\ldots
 \subsection{Specifiche Funzionalità}
 Le funzionalità specifiche dell'utente, scenari
 \subsection{Progettazione di Rete}
