@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  30 MAR 2025 12:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  30 MAR 2025 14:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**Main.tex
+(./Main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -240,7 +240,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__pdf_internal_box=\box55
 )
 (./main.aux)
-\openout1 = `main.aux'.
+\openout1 = `Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -286,7 +286,7 @@ Package hyperref Info: Link coloring OFF on input line 18.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
-\openout3 = `main.out'.
+\openout3 = `Main.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 21.
@@ -442,12 +442,12 @@ ell'impianto fo-to-voltaico,
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
+Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: 7135D6D85CC0A118535BC40EAD68DCC2;3812.
  ) 
 Here is how much of TeX's memory you used:
- 9622 strings out of 473190
- 147929 string characters out of 5719979
+ 9623 strings out of 473190
+ 147933 string characters out of 5719979
  558151 words of memory out of 5000000
  32684 multiletter control sequences out of 15000+600000
  566353 words of font info for 60 fonts, out of 8000000 for 9000
@@ -463,7 +463,7 @@ cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
 .pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/t
 exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/202
 5/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (12 pages, 1170876 bytes).
+Output written on Main.pdf (12 pages, 1170876 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  260 compressed objects within 3 object streams

@@ -427,3 +427,20 @@ body {
  input:checked + .slider:before {
   transform: translateX(1.5em);
  }
+
+ .footer{
+    padding: 30px;
+    background-color: #777;
+ }
+
+ .footer a{
+    color: #ccc;
+    margin: 12px;
+    padding-top: 8px ;
+}
+
+.icone{
+    padding-top: 8px;
+    padding-bottom: 25px;
+}
+
