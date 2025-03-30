@@ -75,6 +75,18 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.lista-f{
+    list-style-type: none;
+    max-height: 300px; /* Imposta l'altezza desiderata per la lista */
+    overflow-y: auto;  /* Abilita lo scrolling verticale */
+    padding-right: 10px; /* Piccolo spazio per evitare che il contenuto tocchi il bordo */
+
+}
+.lista-f li{
+    display: flex;
+    font-size: 14px;
+}
+
 /*////////PIANTINA////////*/
 
 .piantine {

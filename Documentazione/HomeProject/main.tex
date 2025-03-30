@@ -34,17 +34,28 @@ La seguente tabella riporta lo storico delle versioni del documento, includendo 
         \hline
         2.0&25/03/2025&Matteo e Filippo & main.tex \\
         \hline
-        2.5&28/03/2025&Matteo e Filippo&main.tex\\
+        2.5&28/03/2025&Matteo e Filippo&Main.tex\\
         \hline
     \end{tabular}\\[4mm]
 \end{center}
 \vspace{15mm}
+\clearpage
 \section{Sommario}
 \begin{enumerate}
-    \item \hyperref[sec:introduzione]{Introduzione}
-    \item \hyperref[sec:situazione]{Situazione attuale}
-    \item \hyperref[sec:requisiti]{Requisiti Hardware \& Software}
-    \item \hyperref[sec:requisiti2]{Specifiche Requisiti Funzionali}
+    \item \hyperref[sec:introduzione]{\Large Introduzione}
+    \item \hyperref[sec:situazione]{\Large Situazione attuale}
+    \item \hyperref[sec:requisiti]{\Large Requisiti Hardware \& Software}
+        \begin{enumerate}
+            \item Dispositivi di Illuminazione
+            \item Dispositivi per la Climatizzazione
+            \item Dispositivi Impianto Fotovoltaico
+        \end{enumerate}
+    \item \hyperref[sec:requisiti2]{\Large Specifiche Requisiti Funzionali}
+        \begin{enumerate}
+            \item HMI
+            \item Specifiche Funzionalità
+            \item Progettazione di Rete
+        \end{enumerate}
 \end{enumerate}
 \clearpage
 \section{Introduzione}\label{sec:introduzione}
@@ -93,20 +104,19 @@ Abbiamo scelto come corpo illuminante principale un lampadario pendente a LED, d
         \item Potenza: \emph{50W}.
         \item Flusso luminoso: \emph{4000 lumen}.
         \item Temperatura Colore: \emph{4000K}.
-        \item D = \emph{50cm}; H = \emph{50cm};
+        \item D = \emph{50cm} $H_t = \emph{190cm}$
     \end{enumerate}
-    \vspace{-20pt}
 \end{quote}
 \begin{figure}[h!]
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{img/lampada.png} % modifica con il percorso della tua prima immagine
+        \includegraphics[width=0.6\linewidth]{img/lampada.png} % modifica con il percorso della tua prima immagine
         \caption{Vista 3D}
     \end{minipage} \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{img/lampada-top.png} % modifica con il percorso della tua seconda immagine
+        \includegraphics[width=0.6\linewidth]{img/lampada-top.png} % modifica con il percorso della tua seconda immagine
         \caption{Vista dall'alto}
     \end{minipage}
 \end{figure}
@@ -119,7 +129,7 @@ Abbiamo scelto come secondo corpo illuminante un lampadario pendente a LED, di f
         \item Potenza: \emph{28W}.
         \item Flusso luminoso: \emph{4000 lumen}.
         \item Temperatura Colore: \emph{3000K}.
-        \item L = \emph{60cm}; H = \emph{50cm};
+        \item L = \emph{60cm}; $H_t = \emph{150cm};$
     \end{enumerate}
     \vspace{-40pt}
 \end{quote}
@@ -148,16 +158,16 @@ Come terzo corpo illuminante abbiamo scelto una lampada da tavolo, combaciando p
         \item D = \emph{42cm}; H = \emph{62cm};
     \end{enumerate}
 \end{quote}
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{img/lampada-tavolo.png} % modifica con il percorso della tua prima immagine
+        \includegraphics[width=0.5\linewidth]{img/lampada-tavolo.png} % modifica con il percorso della tua prima immagine
         \caption{Vista 3D}
     \end{minipage} \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{img/lampada-tavolo-top.png} % modifica con il percorso della tua seconda immagine
+        \includegraphics[width=0.5\linewidth]{img/lampada-tavolo-top.png} % modifica con il percorso della tua seconda immagine
         \caption{Vista dall'alto}
     \end{minipage}
 \end{figure}
@@ -189,7 +199,7 @@ Ho scelto di installare un condizionatore con funzione sia di raffreddamento che
 \end{figure}
 \hrule
 \subsubsection{2° Dispositivo di Riscaldamento}
-Ho scelto di installare un pannello riscaldante in bagno per garantire un riscaldamento più uniforme e discreto, evitando l'umidità e migliorando l'igiene. Inoltre, il pannello offre un'alternativa più pulita e sicura rispetto ai tradizionali radiatori, riducendo al minimo l'accumulo di polvere e migliorando il comfort generale.
+Abbiamo scelto di installare un pannello riscaldante in bagno per garantire un riscaldamento più uniforme e discreto. Inoltre, il pannello offre un'alternativa più pulita e sicura rispetto ai tradizionali radiatori, riducendo al minimo l'accumulo di polvere e aumentando l'efficienza energetica.
 \begin{quote}
     \begin{enumerate}
         \item Capacità di Riscaldamento: \emph{7000 BTU}
@@ -212,30 +222,47 @@ Ho scelto di installare un pannello riscaldante in bagno per garantire un riscal
     \end{minipage}
 \end{figure}
 \clearpage
-\subsection{Dispositivo per l'Irrigazione}
-\subsubsection{1° Dispositivo Irrigatorio}
-
+\subsection{Dispositivi Impianto Fotovoltaico}
+\subsubsection{Pannello Fotovoltaico}
+Ho scelto il pannello JA Solar Black Frame da 415W per la sua alta efficienza e affidabilità. La potenza di 415W garantisce una buona produzione di energia, mentre la garanzia di 12 anni assicura una lunga durata. Il pannello utilizza tecnologia monocristallina, offrendo un'alta efficienza nella produzione di energia solare anche nelle ore con scarsa luminosità.
 \begin{quote}
     \begin{enumerate}
-        \item Capacità di Riscaldamento: \emph{7000 BTU}
-        \item Efficienza Energetica: \emph{A++}
-        \item W = \emph{102cm}; L = \emph{64cm}; Peso: \emph{7kg}; 
+        \item Potenza nominale: \emph{410W}.
+        \item N° di Celle: \emph{108 ($6\times 18$)}.
+        \item T° Operativa: \emph{-40° - +85°}.
+        \item Garanzia: \emph{12 anni}.
+        \item L = \emph{172cm}; W = \emph{97cm}; peso: \emph{16.7kg};
     \end{enumerate}
 \end{quote}
 \vspace{-15px}
 \begin{figure}[h]
     \centering
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=0.4\linewidth]{img/pannelo.png} % modifica con il percorso della tua prima immagine
-        \caption{Vista 3D}
-    \end{minipage} \hfill
-    \begin{minipage}{0.45\textwidth}
-        \centering
-        \includegraphics[width=0.4\linewidth]{img/panello-top.png} % modifica con il percorso della tua seconda immagine
-        \caption{Vista dall'alto}
-    \end{minipage}
+    \includegraphics[width=0.6\linewidth]{img/pannello-solare.png}
+    \caption{Vista 3D}
+    \label{fig:pannello-solare}
 \end{figure}
+\subsubsection{Batteria}
+La scelta della batteria per l'impianto fotovoltaico è stata dettata da parametri rigurdanti una totale sicurezza, data la sensibilità del dispositivo. Inoltre assicura un'alimentazione della casa anche nelle ore con scarsa o nulla produzione energetica.
+\begin{quote}
+    \begin{enumerate}
+        \item Energia Totale: \emph{10300Wh}.
+        \item potenza uscita Contnua: \emph{5000W}.
+        \item Grado di Protezione: \emph{IP55}.
+        \item T° Operativa: \emph{-10° - +50°}.
+        \item Garanzia: \emph{10 anni}.
+        \item L = \emph{1179cm}; W = \emph{250cm}; peso: \emph{121kg};
+    \end{enumerate}
+\end{quote}
+\vspace{-15px}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/batteria.png}
+    \caption{Vista 3D}
+    \label{fig:batteria}
+\end{figure}
+
+    % Specifica Requisiti Funzionali
+\clearpage
 \section{Specifica Requisiti Funzionali}\label{sec:requisiti2}
 \subsection{HMI - Human Machine Interface}
 Il cliente richiede un’interfaccia grafica (HMI) accessibile da più dispositivi, tra cui computer, telefoni, un tablet e pannelli di controllo installati in ogni stanza. Questi dispositivi devono garantire un'esperienza un uso ottimale, un'interfaccia responsive che si adatti automaticamente alle diverse dimensioni dello schermo e che mantenga una navigazione fluida e intuitiva.  I pannelli di controllo posizionati strategicamente in ogni stanza della casa, devono consentire la gestione dei parametri della relativa stanza, di cui: illuminazione, temperatura, stato delle finestre, irrigazione e il sistema d’allarme. Gli altri dispositivi, di cui telefoni, computer e un tablet devono invece rappresentare lo stato generale della casa, con comunque la possibilità di interagire con il sitema domotica di ogni singola stanza.\\[1.5mm]
