@@ -82,3 +82,25 @@ updateTimeDisplay();
 
 
 /*//////////TIMER//////////*/
+// Elementi DOM
+const mercury = document.getElementById('mercury');
+const tempDisplay = document.getElementById('temp-display');
+const tempSlider = document.getElementById('temp-slider');
+
+// Aggiorna il termometro in base alla temperatura
+function updateThermometer(temp) {
+  // Calcola l'altezza del mercurio (percentuale)
+  const percentage = (temp / 40) * 100;
+  mercury.style.height = `${percentage}%`;
+  
+  // Aggiorna il display
+  tempDisplay.textContent = `${temp}°C`;
+}
+
+// Event listener per lo slider
+tempSlider.addEventListener('input', function() {
+  updateThermometer(parseInt(this.value));
+});
+
+// Inizializza
+updateThermometer(20);
