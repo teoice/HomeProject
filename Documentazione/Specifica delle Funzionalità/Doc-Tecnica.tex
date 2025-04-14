@@ -1,0 +1,48 @@
+\documentclass[italian, 12pt, a4paper]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[table]{xcolor}
+\usepackage[hidelinks]{hyperref} % Evita bordi colorati nei link
+
+\setlength{\parindent}{10mm} % Imposta il rientro della prima riga di ogni paragrafo
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\titleformat{\section}{\color{violet!60}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\color{violet!45}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{violet!30}}{\thesubsubsection}{1em}{}
+\title{\huge{HomeProject}}
+\author{Matteo Saramin, Filippo Sperandio \textit{DomusFelix} \\ {\small ITTS Vito Volterra} \\ \\ \emph{Cliente: Roberto Rossi}}
+
+\newcommand{\version}{Version 2.5} % Definisce il comando per la versione
+\date{\version\\ 15 Marzo 2025}
+\begin{document}
+\maketitle
+\section{Storico del Documento}
+La seguente tabella riporta lo storico delle versioni del documento, includendo la versione, la data di rilascio, gli autori delle modifiche e il nome del file corrispondente.
+
+\begin{center}
+    \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
+    \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \rowcolor{violet!30}
+        Versione & Data & Autore & Nome Documento \\
+        \hline
+        1.0 & 14/04/2025 & Matteo e Filippo & Doc-Tecnica.tex \\
+        \hline
+    \end{tabular}\\[4mm]
+\end{center}
+\clearpage
+\section{Sommario}
+\begin{enumerate}
+    \item \hyperref[sec:introduzione]{\Large Introduzione}
+    \item \hyperref[sec:progettazione]{\Large Progettazione di Rete}
+\end{enumerate}
+\clearpage
+\section{Introduzione}\label{sec:introduzione}
+Questo documento ha lo scopo di 
+\clearpage
+\section{Progettazione di Rete}\label{sec:progettazione}
+owirngoegneneonge
+\clearpage
+\end{document}
