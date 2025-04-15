@@ -13,13 +13,11 @@
 \title{\huge{HomeProject}}
 \author{Matteo Saramin, Filippo Sperandio \textit{DomusFelix} \\ {\small ITTS Vito Volterra} \\ \\ \emph{Cliente: Roberto Rossi}}
 
-\newcommand{\version}{Version 2.5} % Definisce il comando per la versione
+\newcommand{\version}{Version 1.0} % Definisce il comando per la versione
 \date{\version\\ 15 Marzo 2025}
 \begin{document}
 \maketitle
 \section{Storico del Documento}
-La seguente tabella riporta lo storico delle versioni del documento, includendo la versione, la data di rilascio, gli autori delle modifiche e il nome del file corrispondente.
-
 \begin{center}
     \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
     \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
@@ -35,14 +33,105 @@ La seguente tabella riporta lo storico delle versioni del documento, includendo 
 \clearpage
 \section{Sommario}
 \begin{enumerate}
-    \item \hyperref[sec:introduzione]{\Large Introduzione}
     \item \hyperref[sec:progettazione]{\Large Progettazione di Rete}
+    \item \hyperref[sec:dispositivi]{\Large Dispositivi}
+    \begin{enumerate}
+        \item \hyperref[sec:lan]{Dispositivi Rete LAN}
+        \item \hyperref[sec:domotico]{Dispositivi Sistema Domotico}
+    \end{enumerate}
 \end{enumerate}
 \clearpage
-\section{Introduzione}\label{sec:introduzione}
-Questo documento ha lo scopo di 
-\clearpage
 \section{Progettazione di Rete}\label{sec:progettazione}
-owirngoegneneonge
+Abbiamo progettato, in base alle caratteristiche dell'abitazione fornitaci, un sistema  che permetta, come concordato con l’utente, di: 
+
+-Regolare la temperatura utilizzando termosifoni presenti in ogni stanza (esclusi cabina armadio, cucina, studio e corridoi) per il riscaldamento, e per il raffreddamento mediante l’utilizzo di 3 condizionatori (presenti in salotto, studio e corridoio primo piano);
+Per l'impostazione della temperatura l’utente ha a disposizione due pannelli fisici presenti in salotto al piano terra e in corridoio nel primo piano e la sezione apposita nell’interfaccia grafica.
+
+-Aprire o chiudere le finestre mediante l’interfaccia grafica nella sezione apposita.
+La chiusura delle finestre è automatizzata in base alla rilevazione del dispositivo “wind detector”, questo decide di chiudere le finestre in caso di vento troppo forte;
+vengono chiuse anche nel caso in cui il termostato venga azionato per permettere un cambio di temperatura più rapido e un minore consumo energetico.
+
+-L’accensione delle luci è controllata mediante l’interfaccia grafica, queste sono posizionate in base in questo modo:
+giardino: 2;
+piano terra: 8 (cucina: 3, entrata: 2, cucina: 1, studio: 1, bagno: 1);
+primo piano: 7 (una per stanza + 1 in balcone)
+
+-L'installamento di un sistema di allarme costituito da:
+Sirena: piazzata in entrata esternamente, 
+Telecamera: 1 piazzata in entrata esternamente;
+Sensori di movimento: 4 piazzati in punti strategici quali: entrata esternamente, Corridoio piano terra, corridoio primo piano e balcone..
+Il sistema è attivabile mediante la sezione apposita nell’interfaccia grafica.
+
+-L'installazione di un sistema di irrigazione per il giardino composto da 3 irrigatori azionabili mediante un timer nella sezione apposita creata nell’interfaccia grafica.
+
+Inoltre Abbiamo implementato un sistema di rete completo composto da router, switch e vari dispositivi di rete per garantire la connettività e il funzionamento efficiente di tutto l'impianto domotico
+-Home Gateway, switch e router sono piazzati al piano terra e questi offrono connessione ad 1 pc fisso e ad 1 laptop;
+-al piano superiore è presente un Access Point che fornisce connessione a 3 telefoni.
+\clearpage
+\section{Dispositivi della Rete}\label{sec:dispositivi}
+\subsection{Dispositivi utilizzati per la  LAN:}\label{sec:lan}
+L’indirizzamento della rete LAN è stato strutturato utilizzando il range 192.168.1.0/24, una rete privata comunemente usata nelle reti locali. Al router è stato assegnato l’indirizzo 192.168.1.1, mentre agli altri dispositivi (PC, switch, access point, smartphone) sono stati assegnati indirizzi statici all’interno dello stesso intervallo. Questa configurazione consente una comunicazione diretta tra tutti i dispositivi della rete LAN e un controllo più semplice degli indirizzi IP assegnati.
+\begin{center}
+    \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
+    \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \rowcolor{violet!30}
+        Dispositivo & Modello & Indirizzo IP\\
+        \hline
+        Home Gateway & DLC100 & 192.168.25.1\\
+        \hline
+        Router & ISR4331 & 192.168.1.1\\
+        \hline
+        Switch & 2900 - 24TT & 192.168.1.2\\
+        \hline
+        PC-Desktop & // & 192.168.1.3\\
+        \hline
+        PC-Laptop & // & 192.168.1.4\\
+        \hline
+        Access Point & AP-PT & 192.168.1.5\\
+        \hline
+        SmartPhone & Telefono1 & 192.168.1.6\\
+        \hline 
+        Smarthone & Telefono2 & 192.168.1.7\\
+        \hline 
+        Smarthone & Telefono3 & 192.168.1.8\\
+        \hline
+    \end{tabular}\\[4mm]
+\end{center}
+\clearpage
+\subsection{Dispositivi utilizzati per il sistema domotico:}\label{sec:domotico}
+\begin{center}
+    \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
+    \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \rowcolor{violet!30}
+        Dipositivo IoT & MTBF* & Numero\\
+        \hline
+        Finestre & 87600 & 10\\
+        \hline
+        Luci & 43800 & 17\\
+        \hline
+        Radiatori & 262800 & 6\\
+        \hline
+        AC & 300000 & 3\\
+        \hline
+        Termostati & 43800 & 2\\
+        \hline
+        Irrigatori & 43800 & 3\\
+        \hline
+        Sirena & 26280 & 1\\
+        \hline
+        Sensore di Movimento & 26280 & 4\\
+        \hline
+        Telecamera & 26280 & 1\\
+        \hline
+    \end{tabular}\\[4mm]
+\end{center}
+\vspace{1cm}
+Abbiamo deciso per questi dispositivi IoT, alcuni di essi implementati da noi appositamente per implemetare le funzionalità richieste, tra cui \emph{Luci, Sensori di Movimento e la Telecamera,} di non assegnare un indirizzo Ip Statico, e di configurare l'indirizzamento in DHCP automaticamente. In questo modo garantiamo ai clienti una maggiore sicurezza e semplicità nel complesso della rete.\\
+Qual'ora i dispositivi IoT della rete non dovessero funzionare corretamente all'interno della simulazione, è necessario ricoleggarli al \emph{Home Server}, in modo da ripristinarli per un corretto funzionamento. I passaggi da seguire sono i seguenti: \\ \emph{Dispositivo IoT - Config - Home Server} \\
+Il valore MTBF indica il grado di affidabilità di un dispositivo elettronico, meccanico o elettrico. Viene calcolato come la media del tempo che intercorre tra due guasti consecutivi durante il normale funzionamento.
 \clearpage
 \end{document}

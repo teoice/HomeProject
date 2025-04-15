@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  14 APR 2025 13:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  15 APR 2025 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -294,11 +294,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 26.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 26.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 26.
+(Font)              <6> on input line 24.
 
 
 [1
@@ -308,6 +308,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [2
 
 ]
+Overfull \hbox (5.53644pt too wide) in paragraph at lines 54--58
+[]\OT1/cmr/m/n/12 -L'accensione delle luci ^^Re con-trol-lata me-di-ante l'inte
+rfaccia grafica, queste
+ []
+
+
 
 [3
 
@@ -315,31 +321,35 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [4
 
+]
+
+[5
+
 ] (./Doc-Tecnica.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Doc-Tecnica.out' has not changed.
-(rerunfilecheck)             Checksum: 4AA64873208D6F8397839018370F1462;494.
+(rerunfilecheck)             Checksum: E55971EC2E26DAC500F1FAAD992579F4;1096.
  ) 
 Here is how much of TeX's memory you used:
- 9396 strings out of 473190
- 144086 string characters out of 5719979
- 555992 words of memory out of 5000000
- 32551 multiletter control sequences out of 15000+600000
- 564337 words of font info for 54 fonts, out of 8000000 for 9000
+ 9414 strings out of 473190
+ 144311 string characters out of 5719979
+ 558152 words of memory out of 5000000
+ 32564 multiletter control sequences out of 15000+600000
+ 564991 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,237b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,540b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb>
-Output written on Doc-Tecnica.pdf (4 pages, 65429 bytes).
+Output written on Doc-Tecnica.pdf (5 pages, 81251 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

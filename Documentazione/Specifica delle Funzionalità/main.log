@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  14 APR 2025 12:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  15 APR 2025 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -293,11 +293,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 28.
+(Font)              <12> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 27.
 
 
 [1
@@ -311,122 +311,117 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [3
 
 ]
-Overfull \hbox (1.40149pt too wide) in paragraph at lines 70--71
-\OT1/cmr/m/n/12 gen-eral-mente l'impostazione dell'interfaccia grafica, senza a
-d-dren-
+Overfull \hbox (11.08891pt too wide) in paragraph at lines 72--73
+\OT1/cmr/m/n/12 LED, di forma sfer-ica e par-alume in tes-suto ig-nifugo, adatt
+a ad un'illuminazione
+ []
+
+<img/lampada.png, id=112, 54.80475pt x 52.998pt>
+File: img/lampada.png Graphic file (type png)
+<use img/lampada.png>
+Package pdftex.def Info: img/lampada.png  used on input line 86.
+(pdftex.def)             Requested size: 105.30035pt x 101.84312pt.
+<img/lampada-top.png, id=114, 124.0635pt x 118.041pt>
+File: img/lampada-top.png Graphic file (type png)
+<use img/lampada-top.png>
+Package pdftex.def Info: img/lampada-top.png  used on input line 91.
+(pdftex.def)             Requested size: 105.30035pt x 100.1876pt.
+
+Overfull \hbox (11.08891pt too wide) in paragraph at lines 97--98
+\OT1/cmr/m/n/12 LED, di forma sfer-ica e par-alume in tes-suto ig-nifugo, adatt
+a ad un'illuminazione
  []
 
 
 
 [4
 
-]
-
-[5
-
-]
-Overfull \hbox (11.08891pt too wide) in paragraph at lines 100--101
-\OT1/cmr/m/n/12 LED, di forma sfer-ica e par-alume in tes-suto ig-nifugo, adatt
-a ad un'illuminazione
- []
-
-<img/lampada.png, id=149, 54.80475pt x 52.998pt>
-File: img/lampada.png Graphic file (type png)
-<use img/lampada.png>
-Package pdftex.def Info: img/lampada.png  used on input line 114.
-(pdftex.def)             Requested size: 105.30035pt x 101.84312pt.
-<img/lampada-top.png, id=151, 124.0635pt x 118.041pt>
-File: img/lampada-top.png Graphic file (type png)
-<use img/lampada-top.png>
-Package pdftex.def Info: img/lampada-top.png  used on input line 119.
-(pdftex.def)             Requested size: 105.30035pt x 100.1876pt.
-
-Overfull \hbox (11.08891pt too wide) in paragraph at lines 125--126
-\OT1/cmr/m/n/12 LED, di forma sfer-ica e par-alume in tes-suto ig-nifugo, adatt
-a ad un'illuminazione
- []
-
-
-
-[6
-
 {c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./img/l
 ampada.png> <./img/lampada-top.png>]
-<img/Lampada_muro.png, id=169, 426.393pt x 198.7425pt>
+<img/Lampada_muro.png, id=131, 426.393pt x 198.7425pt>
 File: img/Lampada_muro.png Graphic file (type png)
 <use img/Lampada_muro.png>
-Package pdftex.def Info: img/Lampada_muro.png  used on input line 140.
+Package pdftex.def Info: img/Lampada_muro.png  used on input line 112.
 (pdftex.def)             Requested size: 175.49881pt x 81.80032pt.
-<img/lampada-muro-top.png, id=170, 60.82726pt x 42.75975pt>
+<img/lampada-muro-top.png, id=132, 60.82726pt x 42.75975pt>
 File: img/lampada-muro-top.png Graphic file (type png)
 <use img/lampada-muro-top.png>
-Package pdftex.def Info: img/lampada-muro-top.png  used on input line 145.
+Package pdftex.def Info: img/lampada-muro-top.png  used on input line 117.
 (pdftex.def)             Requested size: 175.49881pt x 123.39978pt.
-<img/lampada-tavolo.png, id=171, 356.532pt x 439.6425pt>
+<img/lampada-tavolo.png, id=133, 356.532pt x 439.6425pt>
 File: img/lampada-tavolo.png Graphic file (type png)
 <use img/lampada-tavolo.png>
-Package pdftex.def Info: img/lampada-tavolo.png  used on input line 165.
+Package pdftex.def Info: img/lampada-tavolo.png  used on input line 137.
 (pdftex.def)             Requested size: 87.7494pt x 108.20642pt.
-<img/lampada-tavolo-top.png, id=172, 99.9735pt x 125.268pt>
+<img/lampada-tavolo-top.png, id=134, 99.9735pt x 125.268pt>
 File: img/lampada-tavolo-top.png Graphic file (type png)
 <use img/lampada-tavolo-top.png>
-Package pdftex.def Info: img/lampada-tavolo-top.png  used on input line 170.
+Package pdftex.def Info: img/lampada-tavolo-top.png  used on input line 142.
 (pdftex.def)             Requested size: 87.7494pt x 109.95518pt.
 
 
-[7 <./img/Lampada_muro.png> <./img/lampada-muro-top.png> <./img/lampada-tavolo.
-png> <./img/lampada-tavolo-top.png>]
-<img/condizionatore.png, id=196, 352.31625pt x 130.086pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[5 <./img/Lampada_muro.png> <./img/lampada-muro-top.png>]
+
+[6 <./img/lampada-tavolo.png> <./img/lampada-tavolo-top.png>]
+<img/condizionatore.png, id=162, 352.31625pt x 130.086pt>
 File: img/condizionatore.png Graphic file (type png)
 <use img/condizionatore.png>
-Package pdftex.def Info: img/condizionatore.png  used on input line 191.
+Package pdftex.def Info: img/condizionatore.png  used on input line 163.
 (pdftex.def)             Requested size: 122.84862pt x 45.35808pt.
-<img/condizionatore-top.png, id=197, 173.448pt x 79.497pt>
+<img/condizionatore-top.png, id=163, 173.448pt x 79.497pt>
 File: img/condizionatore-top.png Graphic file (type png)
 <use img/condizionatore-top.png>
-Package pdftex.def Info: img/condizionatore-top.png  used on input line 196.
+Package pdftex.def Info: img/condizionatore-top.png  used on input line 168.
 (pdftex.def)             Requested size: 122.84862pt x 56.30618pt.
-<img/pannelo.png, id=198, 1754.555pt x 1968.35374pt>
+<img/pannelo.png, id=164, 1754.555pt x 1968.35374pt>
 File: img/pannelo.png Graphic file (type png)
 <use img/pannelo.png>
-Package pdftex.def Info: img/pannelo.png  used on input line 215.
+Package pdftex.def Info: img/pannelo.png  used on input line 187.
 (pdftex.def)             Requested size: 70.19844pt x 78.75076pt.
-<img/panello-top.png, id=199, 301.125pt x 46.1725pt>
+<img/panello-top.png, id=165, 301.125pt x 46.1725pt>
 File: img/panello-top.png Graphic file (type png)
 <use img/panello-top.png>
-Package pdftex.def Info: img/panello-top.png  used on input line 220.
+Package pdftex.def Info: img/panello-top.png  used on input line 192.
 (pdftex.def)             Requested size: 70.19844pt x 10.76387pt.
 
 
-[8
+[7
 
  <./img/condizionatore.png> <./img/condizionatore-top.png> <./img/pannelo.png> 
 <./img/panello-top.png>]
-<img/pannello-solare.png, id=219, 602.25pt x 782.925pt>
+<img/pannello-solare.png, id=186, 602.25pt x 782.925pt>
 File: img/pannello-solare.png Graphic file (type png)
 <use img/pannello-solare.png>
-Package pdftex.def Info: img/pannello-solare.png  used on input line 240.
+Package pdftex.def Info: img/pannello-solare.png  used on input line 212.
 (pdftex.def)             Requested size: 234.00238pt x 304.2046pt.
 
-Overfull \hbox (3.91258pt too wide) in paragraph at lines 245--246
+Overfull \hbox (3.91258pt too wide) in paragraph at lines 217--218
 \OT1/cmr/m/n/12 La scelta della bat-te-ria per l'impianto fo-to-voltaico ^^Re s
 tata det-tata da parametri
  []
 
 
 
-[9
+[8
 
  <./img/pannello-solare.png>]
-<img/batteria.png, id=233, 1204.5pt x 1204.5pt>
+<img/batteria.png, id=200, 1204.5pt x 1204.5pt>
 File: img/batteria.png Graphic file (type png)
 <use img/batteria.png>
-Package pdftex.def Info: img/batteria.png  used on input line 259.
+Package pdftex.def Info: img/batteria.png  used on input line 231.
 (pdftex.def)             Requested size: 234.00238pt x 234.00354pt.
 
 
-[10 <./img/batteria.png (PNG copy)>]
-Overfull \hbox (6.27931pt too wide) in paragraph at lines 268--272
+[9 <./img/batteria.png (PNG copy)>]
+
+[10
+
+]
+Overfull \hbox (6.27931pt too wide) in paragraph at lines 255--259
 \OT1/cmr/m/n/12 Un as-petto fon-da-men-tale dell'HMI ^^Re il mon-i-tor-ag-gio d
 ell'impianto fo-to-voltaico,
  []
@@ -435,24 +430,23 @@ ell'impianto fo-to-voltaico,
 
 [11
 
-]
 
-[12] (./main.aux)
+] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 9BF5C6F980F6F4D902B91D46D2E7754C;3996.
+(rerunfilecheck)             Checksum: 0DD712DAC9F524466BD0E34F20C0D315;3270.
  ) 
 Here is how much of TeX's memory you used:
- 9632 strings out of 473190
- 148022 string characters out of 5719979
- 558159 words of memory out of 5000000
- 32685 multiletter control sequences out of 15000+600000
+ 9613 strings out of 473190
+ 147798 string characters out of 5719979
+ 557148 words of memory out of 5000000
+ 32679 multiletter control sequences out of 15000+600000
  566353 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,875b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,875b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dis
@@ -463,10 +457,10 @@ cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
 .pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/t
 exlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/202
 5/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Main.pdf (12 pages, 1171729 bytes).
+Output written on Main.pdf (11 pages, 1166469 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
- 108 named destinations out of 1000 (max. 500000)
- 253 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 300 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 
