@@ -5,6 +5,7 @@
 
 \setlength{\parindent}{10mm} % Imposta il rientro della prima riga di ogni paragrafo
 \usepackage{xcolor}
+\usepackage{adjustbox}
 \usepackage{titlesec}
 
 \titleformat{\section}{\color{violet!60}\normalfont\Large\bfseries}{\thesection}{1em}{}
@@ -17,7 +18,7 @@
 \date{\version\\ 15 Marzo 2025}
 \begin{document}
 \maketitle
-\section{Storico del Documento}
+\section*{Storico del Documento}
 \begin{center}
     \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
     \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
@@ -30,20 +31,164 @@
         \hline
         2.0 & 20/04/2025 & Matteo e Filippo & DocTecnica.tex \\
         \hline
+        3.0 & 03/05/2025 & Matteo e Filippo & DocTecnica.tex \\
+        \hline
     \end{tabular}\\[4mm]
 \end{center}
 \clearpage
-\section{Sommario}
+\section*{Sommario}
 \begin{enumerate}
-    \item \hyperref[sec:progettazione]{\Large Progettazione di Rete}
+    \item \hyperref[sec:introduzione]{\Large Introduzione}
+    \item \hyperref[sec:descrizione]{\Large Descrizione Archittetura}
     \item \hyperref[sec:dispositivi]{\Large Dispositivi}
     \begin{enumerate}
         \item \hyperref[sec:lan]{Dispositivi Rete LAN}
         \item \hyperref[sec:domotico]{Dispositivi Sistema Domotico}
     \end{enumerate}
+    \item \hyperref[sec:progettazione]{\Large Funzionalità della Rete}
+    \item \hyperref[sec:simulazione]{\Large Simulazione delle Rete}
+    \item \hyperref[sec:conclusioni]{\Large Conclusioni}
 \end{enumerate}
 \clearpage
-\section{Progettazione di Rete}\label{sec:progettazione}
+%------------------------INTRODUZIONE--------------------------------------------------------------------
+\section{Introduzione}\label{sec:introduzione}
+Il seguente progetto ha previsto una prima fase di analisi dettagliata della rete, in linea con le esigenze del cliente, seguita da una seconda fase di effettivo sviluppo e simulazione della rete, utilizzando il software Cisco Packet Tracer. La realizzazione di questa rete simulata si è rivelata fondamentale per testarne l'affidabilità e l'efficienza, permettendo di verificare le prestazioni in scenari reali e simulati. Inoltre, ha consentito un continuo scambio di informazioni con il cliente, che ha potuto monitorare i progressi del progetto, garantendo così un sistema adeguato alle sue aspettative.
+\clearpage
+
+%------------------------DESCRIZIONE ARCHITTETURA--------------------------------------------------------------------
+\section{Descrizione Archittetura}\label{sec:descrizione}
+Abbiamo progettato la rete con l’obiettivo di simulare in maniera fedele il funzionamento di un’abitazione intelligente, simulando scenari realistici di utilizzo quotidiano e verificando la risposta del sistema in diverse condizioni operative. La rete si articola in due sezioni principali: la prima dedicata all’ambito domotico, con l’implementazione di dispositivi IoT come sensori ambientali, luci intelligenti e attuatori connessi, gestiti attraverso i moduli DLC100 e integrati in due connessioni wireless locali, una per piano abitativo; la seconda rappresenta dalla LAN principale, composta da un router, uno switch di livello 2, un access point e vari dispositivi terminali. Anche in questo caso sono state effettuate le relative simulazione e test, per verificare il corretto funzionamento della rete. L’intera rete è stata progettata per garantire efficienza operativa (ridotta latenza e affidabilità nella trasmissione dei dati), facilità di uso da parte dell’utente e possibilità di controllo remoto. Le scelte progettuali adottate hanno consentito di ottenere un buon compromesso tra costi contenuti, tempi di realizzazione ottimizzati e alta qualità.
+\subsection{Struttura della Rete}
+La rete domestica è stata progettata in due sezioni principali; una prima sezione LAN, composta dai seguenti dispositivi: \begin{enumerate}
+    \item 1 Router
+    \item 1 Switch
+    \item 1 Access Point
+    \item 1 Computer Desktop
+    \item 1 Computer LapTop
+    \item 3 Telefoni mobile
+\end{enumerate}
+Questa prima articolazione fornisce connettività ai dispositivi richiesti dall'utente, quali computer e telefoni, utilizzati quotidianamente; costituendo, per questo, una parte fondamentale della rete. \\Il Gateway domestico è costituito dal router Cisco ISR4331, al quale è connesso lo switch Cisco 2960-24TT di livello 2, tramite la porta \emph{GigabitEthernet 0/0/0}. Lo switch consente la connessione cablata Ethernet dei due computer tramite un impianto di rete installato nelle pareti dell'edificio, garantendo ottime prestazioni. I dispositivi collegati allo switch sono il computer desktop dello studio e il LapTop della camera degli ospiti; connette inoltre l'access point;  il quale, insieme ai due computer è collegato tramite le prime porte \emph{FastEthernet} disponibili dello switch.\\A sua volta l'AP consente la connessione wireless ai tre telefoni, specificati dal cliente, operando sul canale \emph{9} a 2,4 GHz. L'SSID configurato è \emph{HomeWifi}, per differenziarlo dalle successive connessioni wireless.\\La topologia adottata per questa sezione è di tipo a stella, con lo switch come nodo centrale di distribuzione. In questa prima articolazione, dato il numero limitato di dispositivi, abbiamo deciso di optare per un indirizzamento statico.\\\\
+La seconda parte della rete comprende l'ambito domotico dell'abitazione, seconda caratteristica fondamentale del progetto. Abbiamo quindi individuato per prima cosa un primo dispositivo che ci permettesse di configurare gli altri dispositivi IoT, questo dispositivo è l'HomeGateway DLC100, un controller che funge appunto da Gateway per i dispositivi IoT domotici, garantendo un indirizzamento DHCP. Consente infatti la raccolata, elaborazione e trasmissione di dati verso quesst'ultimi. Per massimizzare l'efficienza della rete abbiamo deciso di installare due di questi dispositivi, uno al piano terra, e uno al primo piano; con i rispettivi nomi \emph{HomeGateway-PT} e \emph{HomeGateway 1°Piano}.\\Ognuno di esse crea una connessione wireless, al quale sono connessi i rispettivi dispositivi Iot del piano, capace di raggiungere dispositvi fino a 200 metri di distanza, operando sul canale 6 a 2,4 GHz. L'SSID per l'HomeGateway al piano terra è \emph{HomeGateway-PT}, mentre per il secondo al primo piano è \emph{HomeGateway-1}.\\ Successivamente sono stati implementati i necessari dispositivi IoT, e configurati. La configurazione ha previsto la connessione alla corretta rete wifi dei due HomeGateway, l'indirizzamento DHCP, l'adozione di un nome il più possibile coerente e infine la connessione all'HomeServer, predisposto automaticamente dall'HomeGateway. I dispositivi IoT sono stati individuati e implementati per rispondere alle esigenze e funzionalità richieste dal cliente, che vedremo più nel dettaglio nella sezione 5, e per realizzare una rete il più possibile simile a quella reale. I dispositivi IoT sono i seguenti: 
+\begin{enumerate}
+    \item 17 Luci
+    \item 10 Finestre
+    \item 2 Termostati
+    \item 3 Condizionatori
+    \item 6 Radiatori
+    \item 4 Sensori di movimento
+    \item 2 Rilevatori di vento
+    \item 1 Sirena
+    \item 2 Telecamere
+    \item 3 Irrigatori
+\end{enumerate}
+\begin{quote}
+    Una delle motivazioni che ci ha condotto a implemetare un secondo DLC100, in modo da suddividere la sezione domotica, è stata proprio l'elevata mole di dispositivi conessi.\\ 
+\end{quote}
+L'ultima unità della sezione domotica sono i dispositivi terminal, che permettono l'accesso a una GUI predefinita di Cisco Packet Tracer, ovvero IoT Monitor, che permette appunto la visualizzazione di tutti i dispositivi connessi all'HomeGateway e la modifica dello stato di ognuno dei dispositivi. Inoltre l'interfaccia grafica permette l'aggiunta di condizioni logiche ovvero regole automatizzate basate su eventi, che consentono di impostare comportamenti reattivi dei dispositivi. Per esempio all'attivazione di un sensore di movimento verranno accese determinate luci. Anche questa possibilità ci ha permesso di creare una rete dettagliata e reale. Come dispositivi utente per accedere all'HomeServer abbiamo scelto due tablet, uno per piano; Per accedere all'applicazione IoT Monitor è necessario aprire la sezione Desktop, e successivamente cliccare sull'icona dell'applicazione.\\In entrambe le parti della rete è stata utilizzata una topologia a stella, che permette di collegare tutti i dispositivi a un punto centrale. Nella rete principale questo ruolo è svolto dallo switch, mentre nella rete domotica dai due HomeGateway. Questa struttura rende la rete più semplice da gestire, più stabile e più facile da espandere in futuro.
+\clearpage
+
+%------------------------DISPOSITIVI--------------------------------------------------------------------
+\section{Dispositivi}\label{sec:dispositivi}
+%---------------RETE LAN--------------------------------------
+\subsection{Dispositivi utilizzati per la  LAN:}\label{sec:lan}
+In quanto alla rete LAN, abbiamo scelto un indirizzamento IP statico, al fine di avere un maggiore controllo nella gestione dei dispositivi e nell'identificazione all'interno della rete. Ogni dispositivo è stato configurato a mano con un indirizzo IP che fa parte della sottorete 192.168.1.0/24, adottata per semplicità e chiarezza. In questo modo si evita la dipendenza da un server DHCP e si facilita la configurazione e la documentazione dell'intera rete. Inoltre, l'uso di IP statici è particolarmente utile in ambienti come questo, dove i dispositivi connessi sono noti e il loro numero è limitato, permettendo così una mappatura ordinata e una gestione semplificata. Successivamente, viene riportata una tabella sintetica dei dispositivi impegnati nella presente prima parte della rete e delle rispettive configurazioni.
+\begin{center}
+    \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
+    \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
+    \begin{adjustbox}{max width=\textwidth} % Aggiunge il ridimensionamento automatico della tabella
+    \begin{tabular}{|c|p{3cm}|c|c|c|}
+        \hline
+        \rowcolor{violet!30}
+        Dispositivo & Modello/Tipo & Connessione & IP/SSID & Funzione\\
+        \hline
+        Router & ISR4331 & Ethernet & 192.168.1.1 & Gateway rete LAN\\
+        \hline
+        Switch & 2900 24TT & Ethernet & 192.168.1.2 & Nodo rete LAN\\
+        \hline
+        Access Point & AP-PT & FastEthernet & 192.168.1.5 & Smistamento rete wireless\\
+        \hline
+        Computer Studio & PC-Desktop & Ethernet & 192.168.1.3 & Dispositivo terminale\\
+        \hline
+        Computer Ospiti & PC-LapTop & Ethernet & 192.168.1.4 & Dispositivo terminale\\
+        \hline
+        Telefono 1-3 & Smartphone-PT & Wi-fi & 192.168.1.6--8 / HomeWifi & Dispositivi terminali\\
+        \hline
+    \end{tabular}
+    \end{adjustbox}\\[4mm]
+\end{center}
+\clearpage
+%----------RETE IoT-------------------------------------------------------------
+\subsection{Dispositivi utilizzati per il sistema domotico:}\label{sec:domotico}
+Nella sezione domotica della rete, l’indirizzamento è stato gestito in modo differente rispetto alla parte LAN. Tutti i dispositivi IoT, inclusi i due tablet utilizzati come terminali utente, sono stati configurati per ricevere automaticamente l’indirizzo IP tramite protocollo DHCP, grazie al servizio integrato nei controller HomeGateway DLC100. Per garantire una migliore distribuzione del carico e una maggiore stabilità, sono stati utilizzati due HomeGateway, uno installato al piano terra con indirizzo IP 192.168.25.1, e l’altro situato al primo piano con indirizzo IP 192.168.25.2. Entrambi operano su rete wireless con SSID dedicati e forniscono connettività a tutti i dispositivi IoT del proprio piano. L’uso del DHCP ha semplificato la configurazione, reso più efficiente l’assegnazione degli indirizzi e facilitato un’eventuale futura espansione della rete.
+\begin{center}
+        \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
+        \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
+        \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            \rowcolor{violet!30}
+            Dispositivo IoT & Numero & Connessione & Indirizzo IP & Funzione\\
+            \hline
+            Luci & 17 & Wi-Fi & DHCP & Attuatore illuminazione \\
+            \hline
+            Finestre & 10 & Wi-Fi & DHCP & Attuatore apertura/chiusura\\
+            \hline
+            Radiatori & 6 & Wi-Fi & DHCP & Riscaldamento\\
+            \hline
+            Condizionatori & 3 & Wi-Fi & DHCP & Raffrescamento\\
+            \hline
+            Termostati & 2 & Wi-Fi & DHCP & Regolazione temperatura\\
+            \hline
+            Irrigatori & 3 & Wi-Fi & DHCP & Irrigazione giardino\\
+            \hline
+            Sirena & 1 & Wi-Fi & DHCP & Allarme sonoro \\
+            \hline
+            Sensori di movimento & 4 & Wi-Fi & DHCP & Rilevamento presenza\\
+            \hline
+            Sensori del vento & 2 & Wi-Fi & DHCP & Rilevamento vento\\
+            \hline
+            Telecamere & 2 & Wi-Fi & DHCP & Videosorveglianza\\
+            \hline
+        \end{tabular}%
+        }
+    \end{center}
+\clearpage
+Di seguito sono riportate le caratteristiche tecniche dei dispositivi IoT utilizzati nella rete domotica. La tabella include dettagli come il numero di dispositivi, il valore MTBF (Mean Time Between Failures), che rappresenta il tempo medio che intercorre tra un guasto e l'altro di un dispositivo. Un valore più alto di MTBF indica un'affidabilità maggiore, poiché il dispositivo ha una probabilità inferiore di guasti nel tempo. Inoltre, è incluso il valore Wattage, che si riferisce al consumo energetico di ciascun dispositivo, misurato in watt. Un valore di wattaggio più basso indica un minor consumo energetico, mentre valori più alti sono tipici di dispositivi che richiedono più potenza per il loro funzionamento. Questi parametri sono fondamentali per garantire l'efficienza e la durabilità della rete domotica nel tempo.
+\begin{center}
+    \renewcommand{\arraystretch}{1.5}
+    \rowcolors{2}{violet!30}{}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \rowcolor{violet!30}
+        Dispositivo IoT & MTBF & Wattage & Alimentazione\\
+        \hline
+        Luci & 43800 & 5W & AC \\
+        \hline
+        Finestre & 87600 & 4W & AC\\
+        \hline
+        Radiatori & 262800 & 100W & AC\\
+        \hline
+        Condizionatori & 300000 & 150W & AC\\
+        \hline
+        Termostati & 43800 & 2W & AC\\
+        \hline
+        Irrigatori & 43800 & 2W & Batteria\\
+        \hline
+        Sirena & 26280 & 10W & Batteria \\
+        \hline
+        Sensori di movimento & 26280 & 1W & Batteria\\
+        \hline
+        Sensori del vento & 26280 & 1W & Batteria\\
+        \hline
+        Telecamere & 26280 & 5W & Batteria\\
+        \hline
+    \end{tabular}
+    }
+\end{center}
+\clearpage
+%------------------------FUNZIONALITà DELLA RETE--------------------------------------------------------------------
+\section{Funzionalità della Rete}\label{sec:progettazione}
 Abbiamo progettato, in base alle caratteristiche dell'abitazione fornitaci, un sistema  che permetta, come concordato con l’utente, di: 
 
 -Regolare la temperatura utilizzando termosifoni presenti in ogni stanza (esclusi cabina armadio, cucina, studio e corridoi) per il riscaldamento, e per il raffreddamento mediante l’utilizzo di 3 condizionatori (presenti in salotto, studio e corridoio primo piano);
@@ -53,14 +198,14 @@ Per l'impostazione della temperatura l’utente ha a disposizione due pannelli f
 La chiusura delle finestre è automatizzata in base alla rilevazione del dispositivo “wind detector”, questo decide di chiudere le finestre in caso di vento troppo forte;
 vengono chiuse anche nel caso in cui il termostato venga azionato per permettere un cambio di temperatura più rapido e un minore consumo energetico.
 
--L’accensione delle luci è controllata mediante l’interfaccia grafica, queste sono posizionate in base in questo modo:
+-L’accensione delle luci è controllata mediante l’interfaccia grafica, queste sono posizionate in questo modo:
 giardino: 2;
 piano terra: 8 (cucina: 3, entrata: 2, cucina: 1, studio: 1, bagno: 1);
 primo piano: 7 (una per stanza + 1 in balcone)
 
 -L'installamento di un sistema di allarme costituito da:
 Sirena: piazzata in entrata esternamente, 
-Telecamera: 1 piazzata in entrata esternamente;
+Telecamere: 2 posizionate una in balcone e una in entrata esternamente;
 Sensori di movimento: 4 piazzati in punti strategici quali: entrata esternamente, Corridoio piano terra, corridoio primo piano e balcone..
 Il sistema è attivabile mediante la sezione apposita nell’interfaccia grafica.
 
@@ -69,72 +214,17 @@ Il sistema è attivabile mediante la sezione apposita nell’interfaccia grafica
 Inoltre Abbiamo implementato un sistema di rete completo composto da router, switch e vari dispositivi di rete per garantire la connettività e il funzionamento efficiente di tutto l'impianto domotico
 -Home Gateway, switch e router sono piazzati al piano terra e questi offrono connessione ad 1 pc fisso e ad 1 laptop;
 -al piano superiore è presente un Access Point che fornisce connessione a 3 telefoni.
+\subsection{Scenari}
 \clearpage
-\section{Dispositivi della Rete}\label{sec:dispositivi}
-\subsection{Dispositivi utilizzati per la  LAN:}\label{sec:lan}
-L’indirizzamento della rete LAN è stato strutturato utilizzando il range 192.168.1.0/24, una rete privata comunemente usata nelle reti locali. Al router è stato assegnato l’indirizzo 192.168.1.1, mentre agli altri dispositivi (PC, switch, access point, smartphone) sono stati assegnati indirizzi statici all’interno dello stesso intervallo. Questa configurazione consente una comunicazione diretta tra tutti i dispositivi della rete LAN e un controllo più semplice degli indirizzi IP assegnati.
-\begin{center}
-    \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
-    \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
-    \begin{tabular}{|c|c|c|}
-        \hline
-        \rowcolor{violet!30}
-        Dispositivo & Modello & Indirizzo IP\\
-        \hline
-        Home Gateway & DLC100 & 192.168.25.1\\
-        \hline
-        Router & ISR4331 & 192.168.1.1\\
-        \hline
-        Switch & 2900 - 24TT & 192.168.1.2\\
-        \hline
-        PC-Desktop & // & 192.168.1.3\\
-        \hline
-        PC-Laptop & // & 192.168.1.4\\
-        \hline
-        Access Point & AP-PT & 192.168.1.5\\
-        \hline
-        SmartPhone & Telefono1 & 192.168.1.6\\
-        \hline 
-        Smarthone & Telefono2 & 192.168.1.7\\
-        \hline 
-        Smarthone & Telefono3 & 192.168.1.8\\
-        \hline
-    \end{tabular}\\[4mm]
-\end{center}
-\clearpage
-\subsection{Dispositivi utilizzati per il sistema domotico:}\label{sec:domotico}
-Tabella riassuntiva di tutti i dispositivi domotici, con le varie caratteristiche tecniche.
-\begin{center}
-    \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
-    \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
-    \begin{tabular}{|c|c|c|}
-        \hline
-        \rowcolor{violet!30}
-        Dipositivo IoT & MTBF* & Numero\\
-        \hline
-        Finestre & 87600 & 10\\
-        \hline
-        Luci & 43800 & 17\\
-        \hline
-        Radiatori & 262800 & 6\\
-        \hline
-        AC & 300000 & 3\\
-        \hline
-        Termostati & 43800 & 2\\
-        \hline
-        Irrigatori & 43800 & 3\\
-        \hline
-        Sirena & 26280 & 1\\
-        \hline
-        Sensore di Movimento & 26280 & 4\\
-        \hline
-        Telecamera & 26280 & 1\\
-        \hline
-    \end{tabular}\\[4mm]
-\end{center}
-\vspace{1cm}
-Abbiamo deciso per questi dispositivi IoT, alcuni di essi implementati da noi appositamente per implemetare le funzionalità richieste, tra cui \emph{Luci, Sensori di Movimento e la Telecamera,} di non assegnare un indirizzo Ip Statico, e di configurare l'indirizzamento in DHCP automaticamente. In questo modo garantiamo ai clienti una maggiore sicurezza e semplicità nel complesso della rete.\\
+
+%------------------------SIMULAZIONE DELLA RETE--------------------------------------------------------------------
+\section{Simulazione della Rete}\label{sec:simulazione}
 Qual'ora i dispositivi IoT della rete non dovessero funzionare corretamente all'interno della simulazione, è necessario ricoleggarli al \emph{Home Server}, in modo da ripristinarli per un corretto funzionamento. I passaggi da seguire sono i seguenti: \\ \emph{Dispositivo IoT - Config - Home Server} \\
-Il valore MTBF indica il grado di affidabilità di un dispositivo elettronico, meccanico o elettrico. Viene calcolato come la media del tempo che intercorre tra due guasti consecutivi durante il normale funzionamento.
+
+\clearpage
+
+%------------------------CONCLUSIONI--------------------------------------------------------------------
+\section{Conclusioni}\label{sec:conclusioni}
+enivm
 \clearpage
 \end{document}

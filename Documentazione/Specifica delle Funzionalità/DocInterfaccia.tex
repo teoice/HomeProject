@@ -1,0 +1,147 @@
+\documentclass[italian, 12pt, a4paper]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[table]{xcolor}
+\usepackage[hidelinks]{hyperref} % Evita bordi colorati nei link
+
+\setlength{\parindent}{10mm} % Imposta il rientro della prima riga di ogni paragrafo
+\usepackage{adjustbox}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinelanguage{JavaScriptCustom}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, with, let, const},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]//,
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{gray}\ttfamily,
+  stringstyle=\color{green!50!black}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+  language=JavaScriptCustom,
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=5pt,
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=true,
+  captionpos=b
+}
+
+
+\titleformat{\section}{\color{violet!60}\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\color{violet!45}\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{violet!30}}{\thesubsubsection}{1em}{}
+\title{\huge{HomeProject}}
+\author{Matteo Saramin, Filippo Sperandio \textit{DomusFelix} \\ {\small ITTS Vito Volterra} \\ \\ \emph{Cliente: Roberto Rossi}}
+
+\newcommand{\version}{Version 1.0} % Definisce il comando per la versione
+\date{\version\\ 15 Marzo 2025}
+\begin{document}
+\maketitle
+\section*{Storico del Documento}
+\begin{center}
+    \renewcommand{\arraystretch}{1.5} % Aumenta lo spazio verticale
+    \rowcolors{2}{violet!30}{} % Alterna colori a partire dalla seconda riga
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \rowcolor{violet!30}
+        Versione & Data & Autore & Nome Documento \\
+        \hline
+        1.0 & 07/05/2025 & Matteo e Filippo & DocInterfaccia.tex \\
+        \hline
+    \end{tabular}\\[4mm]
+\end{center}
+\clearpage
+\section*{Sommario}
+\begin{enumerate}
+    \item \hyperref[sec:introduzione]{\Large Introduzione}
+    \item \hyperref[sec:descrizione]{\Large Struttura \& Archittetura dell'Interfaccia}
+    \item \hyperref[sec:progettazione]{\Large Progettazione Grafica}
+    \item \hyperref[sec:codice]{\Large Approfondimento del Codice}
+    \item \hyperref[sec:conclusioni]{\Large Conclusioni}
+\end{enumerate}
+\clearpage
+\section{Introduzione}\label{sec:introduzione}
+Il seguente progetto ha previsto la realizzazione di un'interfaccia grafica destinata interamente all'utente, con l'obbiettivo di gestire il sistema domotico soddisfando le funzionalità richieste dall'utente. Allo sviluppo dell'interfaccia abbiamo dato massima importanza, dato che rappresenta la congiunzione tra il sistema e l'utente, la cosidetta \emph{HMI: Human Machine Interface}.
+\clearpage
+\section{Struttura \& Archittetura dell'Interfaccia}\label{sec:descrizione}
+Abbiamo implementato la HMI (Human-Machine Interface) tramite tre linguaggi principali: \emph{HTML5}, utilizzato per definire la struttura e i contenuti testuali delle pagine; \emph{CSS3}, impiegato per la formattazione grafica e la personalizzazione dello stile secondo criteri visivi definiti; e \emph{JavaScript (ECMAScript 6)}, utilizzato per introdurre elementi dinamici, interattività e animazioni, migliorando così l’esperienza utente complessiva.\\
+L'interfaccia è composta da tre pagine principali: login.html, per l'autenticazione degli utenti; main.html, che rappresenta la dashboard centrale del sistema domotico; e form.html, dedicata al contatto diretto con l’azienda tramite un modulo di messaggistica.
+A completare la struttura del sito sono presenti il file \emph{style.css}, responsabile dello stile grafico generale, il file \emph{script.js}, che gestisce il comportamento interattivo del sito, e infine la cartella \emph{img}, contenente tutte le risorse grafiche come icone, loghi e immagini illustrative.
+
+\subsection{Login}
+La pagina login.html rappresenta il punto di accesso al sistema domotico. Il suo scopo è autenticare l’utente prima di consentire l'accesso alle funzionalità gestionali offerte dalla piattaforma. Questa interfaccia è composta da un modulo che richiede l’inserimento di credenziali (username e password) ed è progettata per offrire un’esperienza semplice ma sicura. La validazione dei dati inseriti viene gestita tramite JavaScript, che controlla la correttezza formale dei campi e, in caso di successo, permette il reindirizzamento alla pagina principale \emph{main.html}.
+\subsection{Main}
+La pagina main.html è il fulcro dell'interfaccia grafica del sistema domotico. Il suo scopo principale è fornire all'utente un punto di controllo centrale per la gestione e monitoraggio dei dispositivi IoT distribuiti in vari ambienti dell’edificio. La pagina è progettata per essere intuitiva e facilmente navigabile, consentendo all'utente di interagire con il sistema in tempo reale, visualizzando e regolando le impostazioni dei dispositivi in modo rapido ed efficace. La struttura della pagina è stata pensata per ottimizzare l'esperienza utente, offrendo una disposizione ordinata e coerente delle informazioni e degli strumenti. Il layout si adatta automaticamente alla dimensione del dispositivo utilizzato, grazie a un design responsivo che garantisce un’interfaccia funzionale sia su desktop che su dispositivi mobili, come tablet. La pagina principale è suddivisa in moduli che raggruppano le diverse funzionalità, facilitando l'accesso a ciascun controllo e monitoraggio dei dispositivi.
+Oltre alla gestione dei dispositivi, la pagina main.html include informazioni sullo stato attuale del sistema, come il consumo energetico, la temperatura ambiente o eventuali notifiche relative ai dispositivi, come malfunzionamenti o allarmi. Ogni modulo è stato progettato per essere facilmente aggiornabile e configurabile, in modo da garantire un'esperienza dinamica e reattiva alle azioni dell'utente.\\
+\subsubsection{Sezione Dispositivi}
+In particolare la dashboard è composta da una prima sezione, con le principali funzionalità, indicizzate da un'icona esplicativa della funzione. Le schede sono le seguenti: 
+\begin{enumerate}
+    \item Luci - \emph{[img/lampadario.png]}
+    \item Finestre - \emph{[img/finestre.png]}
+    \item Irrigatori - \emph{[img/irrigatore.png]}
+    \item Termometri - \emph{[img/termometro.png]}
+    \item Sicurezza - \emph{[img/allarme.png]}
+\end{enumerate}
+\paragraph{Luci \& Finestre}Le prime due schede dell’interfaccia, dedicate rispettivamente alla gestione delle luci e delle finestre, sfruttano un effetto di hover definito tramite CSS per migliorare l’interazione utente. Quando il cursore del mouse passa sopra la scheda, questa si espande automaticamente grazie a una regola \emph{:hover}, rendendo visibile una lista di dispositivi associati. Ciascun dispositivo è rappresentato da un blocco contenente il nome rappresentativo del dispositivo e un toggle switch, cliccabile per modificarne lo stato: ad esempio, è possibile accendere o spegnere una luce oppure aprire o chiudere una finestra. Lo stato attuale è indicato visivamente tramite il cambio di colore dell’icona, garantendo un feedback immediato all’utente.\\
+\paragraph{Irrigazione}La terza scheda dell’interfaccia è dedicata al controllo manuale dell’impianto di irrigazione. Al centro è visibile un timer che indica la durata del ciclo di irrigazione, visualizzata nel formato \emph{mm:ss} (minuti:secondi). Sotto di esso sono presenti cinque pulsanti con funzioni distinte. I pulsanti “+1 Minute” e “–1 Minute” permettono rispettivamente di incrementare o decrementare la durata del timer di un minuto.  I pulsanti “Start” e “Pause” consentono l’avvio e l’interruzione temporanea del ciclo. Il tasto reset è rappresentato da un’icona con un simbolo circolare. Questo pulsante consente di riportare il timer al valore iniziale, azzerando eventuali modifiche apportate. Offriamo così un controllo preciso e intuitivo del sistema.\\
+\paragraph{Temperatura}La quarta scheda è responsabile della gestione della temperatura, suddivisa nei due piani dell'abitazione: piano terra e primo piano. Tramite i relativi \emph{slider} è possibile modificare la temperatura del piano, che verrà visualizzata nelle icone rappresentative dei termometri.
+\paragraph{Sicurezza}L'ultima scheda presenta un unico \emph{toggle switch} per attivare o disattivare il sistema d'allarme.
+\subsubsection{Sezione Parametri}
+La sezione centrale prevede tre blocchi, identificati da un'icona stilizzata, e rappresentano parametri vitali della casa: 
+\begin{enumerate}
+    \item Temperatura - \emph{[img/termometro.jpg]}
+    \item Sistema Fotovoltaico - \emph{[img/pannello.jpg]}
+    \item Energia - \emph{[img/fulmine.jpg]}
+\end{enumerate}
+\paragraph{Temperatura} Il primo blocco mostra la temperatura interna ed esterna della casa. La prima viene individuata tramite la media dei valori di temperatura visti precedentemente, ovvero la temperatura del piano terra e del primo piano. La seconda invece viene generata tramite una funzione random di un range di valori plausibili. 
+\paragraph{Sistema Fotovoltaico} Il secondo blocco descrive i parametri del sistema fotovoltaico, ovvero la produzione oraria e la percentuale della batteria.
+\paragraph{Energia} L'ultimo blocco mostra il consumo energetico dell'intera abitazione. Anche in questo caso il valore viene generato random da una funzione con valori plausibili.  
+\subsection{Form}
+Il form presente nella terza pagina del sito consente all’utente di contattare l’azienda tramite un semplice modulo. È composto da un unico campo per inserire il messaggio. Una volta scritto, l’utente può inviare il messaggio cliccando sul pulsante dedicato.L’utente può utilizzare il form per inviare richieste di assistenza, segnalare eventuali problemi tecnici riscontrati nel sistema domotico, proporre suggerimenti per miglioramenti futuri oppure richiedere informazioni commerciali sull’impianto o sull’azienda stessa. \\La pagina è stata progettata per essere chiara e facilmente utilizzabile, garantendo una comunicazione diretta e immediata.\\[4mm]
+Inoltre ognuna di queste pagine sono munite di un menu, posto in alto, e di un footer in basso. Entrambi mostrano il logo dell'azienda e per un design unico e moderno abbiamo scelto come colore di background un grigio scuro, il \emph{\#777}. Il menu presenta le altre pagine disponibili, mentre il footer dei link utili per raggiungerci tramite social o software dedicati, tra cui Facebook, Instagra, GitHub e LinkedIn, oppure i nostri numeri di telefono: Filippo: +39 240 581 4924 Matteo: +39 592 930 7482
+\clearpage
+\section{Progettazione Grafica}\label{sec:progettazione}
+oiwjw
+\clearpage
+\section{Approfondimento del Codice}\label{sec:codice}
+\subsection{JavaScript}
+\subsubsection{Funzione Random}
+\begin{lstlisting}[caption={Funzione Random}, label={lst:funzioneJS}]
+function updateRandomValue(id, min, max) {
+  const display = document.getElementById(id);
+  let current = Math.random() * (max - min) + min;
+
+  function update() {
+    // Calcola un delta tra -0.5 e +0.5
+    let delta = (Math.random() - 0.5) * 1;
+    let newValue = current + delta;
+    // Limita il valore nei confini
+    newValue = Math.max(min, Math.min(max, newValue));  
+
+    current = newValue;
+    display.textContent = current.toFixed(1);
+  }
+  update();     // esegue appena aperta la pagina
+  setInterval(update, 6000);  // Aggiorna ogni 6 secondi
+}
+\end{lstlisting}
+Questa funzione JavaScript è stata realizzata per aggiornare automaticamente, a intervalli regolari, alcuni valori numerici mostrati nell’interfaccia, allo scopo di rendere la simulazione più realistica. I parametri modificati sono: la temperatura esterna, la produzione oraria dell’impianto fotovoltaico, la percentuale di carica della batteria e il consumo energetico dell’abitazione. Tali valori, presenti nella sezione “Parametri”, non sono stati ricavati da sensori reali, ma simulati tramite codice.\\La funzione accetta tre parametri: \emph{id}, l’identificativo del tag HTML; \emph{min}, il valore minimo; \emph{max}, il valore massimo. All’avvio, viene generato un valore iniziale casuale compreso tra min e max. Successivamente, a intervalli regolari di 6 secondi, la funzione applica una piccola variazione casuale (delta) al valore corrente, scegliendo un numero nell'intervallo da -0.5 a +0.5. Il nuovo valore \emph{newValue} viene poi limitato entro i confini stabiliti usando la funzione Math.max(min, Math.min(max, newValue)), così da garantire che non superi mai i limiti definiti. Infine, il valore viene aggiornato nel contenuto testuale del tag HTML corrispondente, formattato con una singola cifra decimale, tramite il metodo \emph{toFixed(1)}
+\clearpage
+\section{Conclusioni}\label{sec:conclusioni}
+woie
+\end{document}

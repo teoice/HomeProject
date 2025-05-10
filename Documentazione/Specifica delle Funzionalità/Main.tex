@@ -41,6 +41,7 @@
 \clearpage
 \section{Sommario}
 \begin{enumerate}
+    \item \hyperref[sec:filosofia]{\Large Filosofia dell'Azienda}
     \item \hyperref[sec:introduzione]{\Large Introduzione}
     \item \hyperref[sec:situazione]{\Large Situazione attuale}
     \item \hyperref[sec:requisiti]{\Large Requisiti Hardware \& Software}
@@ -57,14 +58,16 @@
         \end{enumerate}
 \end{enumerate}
 \clearpage
-\section{Introduzione}\label{sec:introduzione}
-Il nostro progetto prevede lo sviluppo di un’interfaccia grafica interattiva che consentirà agli utenti di controllare in modo semplice ed efficace le funzionalità della propria abitazione. L’idea centrale è offrire un sistema intuitivo, accessibile da più dispositivi e in grado di migliorare il comfort, la sicurezza e l’efficienza energetica della casa.\\[1.5mm]
+\section{Filosofia dell'Azienda}\label{sec:filosofia}
 Per garantire che il sistema realizzato sia il più possibile aderente alle necessità del cliente, abbiamo strutturato un questionario mirato, suddiviso in diverse sezioni. Questo questionario è stato elaborato per raccogliere dettagli sulla configurazione dell’abitazione, i dispositivi domotici desiderati, le funzionalità ritenute più importanti e le preferenze riguardanti l’interfaccia utente.
 Le informazioni fornite dal cliente ci permetteranno di sviluppare un sistema domotico su misura, ottimizzando la disposizione dei dispositivi, i parametri di controllo e l’interazione con il sistema. Inoltre, l’analisi delle risposte ci aiuterà a progettare un’interfaccia grafica chiara e funzionale, organizzata in base alle diverse zone della casa e alle principali operazioni disponibili.\\[1.5mm]
 La comunicazione con il cliente è un elemento essenziale per il successo del progetto, e questo documento rappresenta un primo passo cruciale per garantire che il prodotto finale risponda alle aspettative e necessità dell’utente.
 \clearpage
+\section{Introduzione}\label{sec:introduzione}
+Il progetto seguente prevede lo sviluppo di un’intero sistema domotico destinato all'abitazione dei nostri clienti. Il sistema nella sua interezza prevede un'interfaccia grafica interattiva che consentirà agli utenti di controllare in modo semplice ed efficace le funzionalità della propria abitazione; una progettazione di rete simulando in modo reale i dispositivi, funzionalità e scenari, e infine i testi documentativi del progetto. L’idea centrale è offrire un sistema intuitivo, accessibile da più dispositivi e in grado di migliorare il comfort, la sicurezza e l’efficienza energetica dell'abitazione.\\[1.5mm]
+\clearpage
 \section{Situazione attuale}\label{sec:situazione}
-\section{Dispositivi Presenti}
+\subsection{Dispositivi Presenti}
 In questa sezione analizzeremo i dispositivi già presenti nell'edificio domestico dei clienti, prima del nostro intervento. Questi dispositivi, acquistati e installati precedentemente, comprendono solo 2 tipologie di corpi illuminanti, abbimao dovuto installarne un terzo sotto specifica richiesta del cliente, condizionatori, radiatori, irrigatori, finestre e termostati.
 \subsection{Illuminazione}
 \subsubsection{1° Lampada Pendente}
@@ -190,10 +193,9 @@ Abbiamo scelto di installare un pannello riscaldante in bagno per garantire un r
 \section{Requisiti Hardware \& Software}\label{sec:requisiti}
 Per un coretto ed efficiente funzionamento dell'intero sistema domotico della casa del nostro cliente, in relazione alle sue richieste e necessità, abbiamo individuato i seguenti requisiti hardware e software.
 \begin{enumerate}
-    \item L'interfacci grafica deve essere utilizzata dal cliente, e richiede che sia chiara, semplice e intuitiva, in modo da modificare i parametri della casa a suo piacimento. Questi parametri sono: la temperatura, l'illuminazione, l'automazione delle finestre, l'irrigazione del giardino e il sistema d'allarme.
+    \item L'interfaccia grafica deve essere utilizzata dal cliente, e richiede che sia chiara, semplice e intuitiva, in modo da modificare i parametri della casa a suo piacimento. Questi parametri sono: la temperatura, l'illuminazione, l'automazione delle finestre, l'irrigazione del giardino e il sistema d'allarme.
     \item L’interfaccia deve adattarsi a diversi dispositivi, funzionando efficacemente su desktop e mobile.
     \item Le modifiche apportate dall’utente devono essere applicate in tempo reale e riflesse nel sistema senza ritardi eccessivi.
-    \item Deve essere presente un pannello di controllo in ogni stanza della casa, con ovviamente la possibilità di modificare i relativi parametri di quella stanza, come illuminazione e temperatura.
     \item Il sistema deve supportare i dispositivi intelligenti che implementano le funzionalità scelte dal'utente.
     \item Il sistema deve permettere di accendere e spegnere le luci in ogni stanza, sia tramite l'interfaccia grafica che fisicamente tramite un pulsante; inoltre sono implementanti delle automazioni, in relazionea a sensori e orari.
     \item Il sistema deve permettere di gestire la temperatura della casa, tramite gli adeguati dispositivi di riscaldamento e raffreddamento.
@@ -249,8 +251,7 @@ Ho scelto il pannello JA Solar Black Frame da 415W per la sua alta efficienza e 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\linewidth]{img/pannello-solare.png}
-    \caption{Vista 3D}
-    \label{fig:pannello-solare}
+    \caption{Vista 3D}\label{fig:pannello-solare}
 \end{figure}
 \clearpage
 \paragraph{Batteria}
@@ -270,8 +271,109 @@ La scelta della batteria per l'impianto fotovoltaico è stata dettata da paramet
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{img/batteria.png}
-    \caption{Vista 3D}
-    \label{fig:batteria}
+    \caption{Vista 3D}\label{fig:batteria}
+\end{figure}
+\clearpage
+\subsubsection{Sensori}
+\paragraph{Sensore di movimento}
+Per garantire una protezione completa sia interna che esterna, abbiamo scelto il Dahua ARD2251E-W2(868). Questo sensore combina la tecnologia PIR e microonda, offrendo una copertura affidabile per ambienti interni ed esterni. La sua protezione IP65 lo rende resistente agli agenti atmosferici, mentre la doppia tecnologia assicura un rilevamento preciso e una riduzione dei falsi allarmi. È la soluzione ideale per un sistema di sicurezza integrato e versatile, con la possibilità di monitorare senza problemi sia ambienti interni che esterni.
+\begin{quote}
+    \begin{enumerate}
+        \item Rilevamento: \emph{Tecnologia PIR \& microonda}.
+        \item Portata: \emph{12 m, angolo di 90°}
+        \item Alimentazione: \emph{Batteria CR123A}
+        \item Protezione \emph{IP65}
+        \item Costo: 38,00€
+        \item N°: 4.
+    \end{enumerate}
+\end{quote}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{img/sensore_mov.png}
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.4\linewidth]{img/sensoreC.png}
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
+\paragraph{Rilevatore del Vento}
+Abbiamo scelto il sensore di vento BFT ANEM P111182 per la sua affidabilità nel monitorare la velocità del vento. Questo anemometro consente di automatizzare la chiusura delle finestre in caso di venti forti, evitando danni e migliorando la sicurezza.
+\begin{quote}
+    \begin{enumerate}
+        \item Tipologia: \emph{Anemometro ad encoder, 2 impulsi per giro}.
+        \item Alimentazione: \emph{24 V}
+        \item Costo: 54,00€
+        \item N°: 2.
+    \end{enumerate}
+\end{quote}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{img/sensore_vento.png}
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.4\linewidth]{img/sensore_ventoC.png}
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
+\clearpage
+\subsubsection{Sistema d'allarme}
+\paragraph{Sirena}
+Abbiamo optato per la sirena d'allarme da esterno Dahua ARA13-W2\-868 per la sua affidabilità e resistenza. La tecnologia wireless a lunga portata e la comunicazione bidirezionale sicura garantiscono un'installazione semplice e flessibile, ideale per sistemi domotici. La protezione IP65 e la doppia alimentazione la rendono ideale per un utilizzo esterno in qualsiasi condizione.
+\begin{quote}
+    \begin{enumerate}
+        \item Pressione Sonora: \emph{110dB}
+        \item Portata: \emph{fino a 1600 m in spazio aperto.}
+        \item Alimentazione: \emph{A batteria CR123A}
+        \item Protezione: \emph{IP65}
+        \item Costo: 96,15€
+        \item N°: 2
+    \end{enumerate}
+\end{quote}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.4\linewidth]{img/sirena.jpg}
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.4\linewidth]{img/sirenaC.png}
+        \caption{Vista dall'alto}
+    \end{minipage}
+\end{figure}
+\clearpage
+\paragraph{Telecamera}
+Per completare il sistema di sicurezza abbiamo scelto la telecamera PIR wireless Dahua ARD1731-W2(868), della stessa serie e marca della sirena d'allarme. Questo garantisce massima compatibilità, comunicazione diretta e una gestione integrata tramite lo stesso ecosistema Dahua AirShield.
+\begin{quote}
+    \begin{enumerate}
+        \item Risoluzione: \emph{1600 $\times$ 1200 pixel}
+        \item Autonomia: \emph{batteria CR123A}
+        \item Sicurezza: \emph{crittografia AES128}
+        \item Costo: 93,00€
+        \item N°: 2.
+    \end{enumerate}
+\end{quote}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{img/telecamera.png}
+        \caption{Vista 3D}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=0.3\linewidth]{img/telecameraC.png}
+        \caption{Vista dall'alto}
+    \end{minipage}
 \end{figure}
 
     % Specifica Requisiti Funzionali
