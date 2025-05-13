@@ -3,7 +3,7 @@ let timerSeconds = 0;
 let timerInterval = null;
 
 
-let lampAlert = document.getElementById('luce');
+let lampAlert = document.getElementsByClassName('luce');
 let windowsAlert = document.getElementsByClassName('finestra');
 let alarmAlert = document.getElementById('allarme');
 
@@ -18,6 +18,8 @@ const tempValue = document.getElementById('temp-value');
 const tempSlider = document.getElementById('temp-control');
 const outTemp = document.getElementById('t-interna');
 
+
+/*//////////TEMPERATURA//////////*/
 
 let start = tempSlider.value;
 let currentTemp = parseInt(start);
@@ -51,13 +53,16 @@ tempSlider.addEventListener('input', () => {
 
 
 /*//////////ALERT//////////*/
-lampAlert.addEventListener('click', function() {
-  if (this.checked) {
-    alert("Hai ACCESO la luce!");
-  } else {
-    alert("Hai SPENTO la luce!");
-  }
-});
+
+for(let luce of lampAlert) {
+  luce.addEventListener("click", () => {
+    if (luce.checked) {
+      alert("Hai APERTO la finestra!");
+    } else {
+      alert("Hai CHIUSO la finestra!");
+    }
+  });
+}
 
 for(let window of windowsAlert) {
   window.addEventListener("click", () => {
@@ -190,6 +195,6 @@ function updateRandomValue(id, min, max) {
 
 
 updateRandomValue("t-esterna", 12, 30);
-updateRandomValue("pro-h", 2,7);
+updateRandomValue("pro-h", 2,6);
 updateRandomValue("batteria", 60, 100);
 updateRandomValue("consumo", 1.5, 4);
