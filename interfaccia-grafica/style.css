@@ -385,7 +385,7 @@ button:disabled {
 .valori-parametri{
   align-items: center;
 	padding-top: 10px;
-	font-size: 40px;
+	font-size: 35px;
 	color: #a542b3;
 }
 
@@ -450,12 +450,12 @@ button:disabled {
     background-color: #777;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     padding-bottom: 66px;
     position: relative;
-    bottom: 0;
+    bottom: 0%;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 100px;
     opacity: 95%;
 }
 
@@ -479,7 +479,7 @@ button:disabled {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -607,76 +607,4 @@ button:disabled {
 
 .send-icon {
   width: 17px;
-}
-
-/*--------LOGIN PAGE------------*/
-
-.login_body{
-  background: #eee;
-  margin: 0 auto;
-}
-
-.content{
-  width: 50%;
-  text-align: center;
-}
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-  text-align: center;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
 }

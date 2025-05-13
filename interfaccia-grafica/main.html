@@ -13,7 +13,7 @@
 
     <nav class="menu">
         <div class="logo">
-            <img src="img/home.png" alt="Home">
+            <a href="main.html"><img src="img/home.png" alt="Home"></a>
             <span>DOMUS FELIX</span>
         </div>
         <div class="menu-links">
@@ -26,75 +26,75 @@
     <section class="singole-funzionalità">
         <div class="container">
           
-          <!--/////Finestre/////-->
+          <!--/////Luci/////-->
             <div class="card">
               <div class="face face1">
                 <div class="content">
                   <h2>Luci</h2>
                   <ul class="lista-f">
                     <li>Luce Giardino</li>
-                        <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
+                      <label class="switch">
+                      <input type="checkbox" id="luce">
+                      <span class="slider"></span>
                     </label>
 
                       <li>Luce Cucina</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
                       <li>Luce Bagno PT</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
                       <li>Luci Entrata</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
                       <li>Luce Ripostiglio</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
                       <li>Luce Studio</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
                       <li>Luce Corridoio</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
                       <li>Luce Camera Matrimoniale</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
                       <li>Luce Camera da Letto</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
                       <li>Luce Camera Ospiti</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
 
-                      <li>Luce Bagno 1° piano<li>
+                      <li>Luce Bagno 1° piano</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="luce">
                       <span class="slider"></span>
                     </label>
                   </ul>
@@ -114,43 +114,37 @@
                     <ul class="lista-f">
                       <li>Soggiorno</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" class="finestra">
                       <span class="slider"></span>
                     </label>
 
                       <li>Bagno piano terra</li>
                       <label class="switch">
-                      <input type="checkbox">
-                      <span class="slider"></span>
-                    </label>
-
-                      <li>Bagno piano terra</li>
-                      <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" class="finestra">
                       <span class="slider"></span>
                     </label>
 
                       <li>Studio</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="finestra">
                       <span class="slider"></span>
                     </label>
 
                       <li>Camera Matrimoniale</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="finestra">
                       <span class="slider"></span>
                     </label>
 
                       <li>Camera da Letto</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="finestra">
                       <span class="slider"></span>
                     </label>
 
-                    <li>Camera degli Ospito</li>
+                    <li>Camera degli Ospiti</li>
                       <label class="switch">
-                      <input type="checkbox">
+                      <input type="checkbox" id="finestra">
                       <span class="slider"></span>
                     </label>
                     </ul>
@@ -175,7 +169,7 @@
                     <div class="button-group">
                       <button id="start-timer">Start</button>
                       <span id="reset-icon" class="reset-icon">🔄</span>
-                      <button id="pause-timer">Pause</button>
+                      <button id="pause-timer" disabled>Pause</button>
                     </div>
                   </div>
                 </div>
@@ -199,7 +193,7 @@
                     </div>
                     <div style="margin-top: 5px;">
                       <span id="temp-value" style="display: block; font-size: 14px; margin-bottom: 5px;">20°C</span>
-                      <input type="range" id="temp-control" min="0" max="40" value="20" style="width: 100px;">
+                      <input type="range" id="temp-control" min="0" max="25" value="20" style="width: 100px;">
                     </div>
                   </div>
                   
@@ -217,7 +211,7 @@
                     <h2>Sicurezza</h2>
                     <li>Allarme</li>
                     <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="allarme">
                     <span class="slider"></span>
                   </label>
 
@@ -239,16 +233,16 @@
       <div class="info-box">      
           <div class="contenitore">
               <div class="colonna immagine">
-                  <img src="img\termometro.jpg" alt="termometro" style="margin-top: 17px;">
+                  <img src="img/termometro.jpg" alt="termometro" style="margin-top: 17px;">
               </div>
               <div class="colonna testo">
-                  <p class="valori-parametri"><b><span id="t-interna">--</span></b></p>
-                  <br>
+                <p class="valori-parametri"><b><span id="t-interna">--</span></b></p>
+                <br>
                   <p style="font-size: 14px;"><b>T° Interna</b></p>
               </div>
               <div class="colonna testo">
-                  <p class="valori-parametri"><b><span id="t-esterna">--</span></b></p>
-                  <br>
+                <p class="valori-parametri"><b><span id="t-esterna">--</span></b></p>
+                <br>
                   <p style="font-size: 14px;"><b>T° Esterna</b></p>
               </div>
           </div>
@@ -262,12 +256,12 @@
                   <img src="img\pannello.jpg" style="margin-top:17px;" alt="fotovoltaico">
               </div>
               <div class="colonna testo">
-                  <p class="valori-parametri"><b><span id="pro-h">--</span> kWh</b></p>
-                  <br>
+                <p class="valori-parametri"><b><span id="pro-h">--</span> kWh</b></p>
+                <br>
                   <p style="font-size: 14px;"><b>Produzione oraria</b></p>
               </div>
               <div class="colonna testo">
-                  <p class="valori-parametri"><b><span id="batteria">--</span>%</b></p>
+                  <p class="valori-parametri"><b>96%</b></p>
                   <br>
                   <p style="font-size: 14px;"><b>Batteria</b></p>
               </div>
@@ -282,8 +276,7 @@
                   <img src="img\fulmine.jpg" alt="Consumo" style="width:50px; height: 90px; margin-top:19px ;" >
               </div>
               <div class="colonna testo">
-                  <p class="valori-parametri"><b><span id="consumo">--</span>kWh</b></p>
-                  <br>
+                <p class="valori-parametri"><b><span id="consumo">--</span>kWh</b></p>                  <br>
                   <p style="font-size: 14px;"><b>Consumo Energetico Orario</b></p>
               </div>
               
@@ -312,7 +305,7 @@
 
     <!--//////////FOOTER//////////-->
     <div class="footer">
-      <img class="footer-img" src="img\home.png">
+      <a href="main.html"><img class="footer-img" src="img\home.png"></a>
       <p><b>Trovi tutti i nostri contatti qua sotto!</b></p>
       <div class="icone">
           <a href="#">

@@ -1,13 +1,11 @@
-function handleClick() {
-    alert("Bottone cliccato!");
-}
-
-
-/*//////////TIMER//////////*/
-
 let timerMinutes = 0;
 let timerSeconds = 0;
 let timerInterval = null;
+
+
+let lampAlert = document.getElementById('luce');
+let windowsAlert = document.getElementsByClassName('finestra');
+let alarmAlert = document.getElementById('allarme');
 
 const timeDisplay = document.getElementById('time-display');
 const addMinuteButton = document.getElementById('add-minute');
@@ -15,6 +13,72 @@ const subtractMinuteButton = document.getElementById('subtract-minute');
 const startButton = document.getElementById('start-timer');
 const pauseButton = document.getElementById('pause-timer');
 const resetIcon = document.getElementById('reset-icon');
+
+const tempValue = document.getElementById('temp-value');
+const tempSlider = document.getElementById('temp-control');
+const outTemp = document.getElementById('t-interna');
+
+
+let start = tempSlider.value;
+let currentTemp = parseInt(start);
+let intervalId = null;
+
+outTemp.innerText = currentTemp;
+
+tempSlider.addEventListener('input', () => {
+  const target = parseInt(tempSlider.value);
+
+  if (intervalId) {
+    clearInterval(intervalId);
+  }
+
+  intervalId = setInterval(() => {
+    if (currentTemp < target) {
+      currentTemp++;
+    } else if (currentTemp > target) {
+      currentTemp--;
+    }
+
+    outTemp.innerText = currentTemp;
+
+    if (currentTemp === target) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  }, 1000); // intervallo più veloce
+});
+
+
+
+/*//////////ALERT//////////*/
+lampAlert.addEventListener('click', function() {
+  if (this.checked) {
+    alert("Hai ACCESO la luce!");
+  } else {
+    alert("Hai SPENTO la luce!");
+  }
+});
+
+for(let window of windowsAlert) {
+  window.addEventListener("click", () => {
+    if (window.checked) {
+      alert("Hai APERTO la finestra!");
+    } else {
+      alert("Hai CHIUSO la finestra!");
+    }
+  });
+}
+
+alarmAlert.addEventListener('click', function() {
+  if (this.checked) {
+    alert("Hai ACCESO l'Allarme!");
+  } else {
+    alert("Hai SPENTO l'Allarme!");
+  }
+});
+
+
+/*//////////TIMER//////////*/
 
 function updateTimeDisplay() {
   const minutes = String(timerMinutes).padStart(2, '0');
@@ -37,6 +101,9 @@ subtractMinuteButton.addEventListener('click', () => {
 });
 
 startButton.addEventListener('click', () => {
+
+  alert('Hai ACCESO il Timer per gli irrigatori!');
+
   if (timerInterval) return; 
 
   startButton.disabled = true; 
@@ -48,7 +115,7 @@ startButton.addEventListener('click', () => {
         timerInterval = null;
         startButton.disabled = false;
         pauseButton.disabled = true; 
-        alert('Time is up!');
+        alert('Il tempo è scaduto, si sono SPENTI gli Irrigatori!');
       } else {
         timerMinutes--;
         timerSeconds = 59;
@@ -81,7 +148,7 @@ resetIcon.addEventListener('click', () => {
 updateTimeDisplay();
 
 
-/*-------------TEMPERATURA--------------------------------*/
+/*//////////TERMOMETRO//////////*/
 (function() {
   const mercuryLevel = document.getElementById('mercury-level');
   const tempValue = document.getElementById('temp-value');
@@ -98,16 +165,8 @@ updateTimeDisplay();
   updateTemp(); // Inizializza
 })();
 
-/*-------------------LOGIN PAGE ------------*/
-// Get the modal
-var modal = document.getElementById('id01');
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-/*-------Funzione parametri cambio valore-------*/
+/*//////////CAMBIO VALORI//////////*/
 function updateRandomValue(id, min, max) {
   const display = document.getElementById(id);
   let current = Math.random() * (max - min) + min;
@@ -129,11 +188,6 @@ function updateRandomValue(id, min, max) {
   setInterval(update, 6000);
 }
 
-function TempInterna(t_PT, t_piano1){
-  let display = document.getElementById("t-interna");
-  let somma = t_PT + t_piano1;
-  display.textContent = (somma/2).toFixed(1);
-}
 
 updateRandomValue("t-esterna", 12, 30);
 updateRandomValue("pro-h", 2,7);
